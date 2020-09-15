@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>WEREWOLF : Sheet Generator</title>
+  </head>
+  <body>
+    <h1>Werewolf: the Apocalypse</h1>
+    <h2>Sheet Generator</h2>
+    <h2>Character Basic Information</h2>
+    <div id="basicInfo">
+      <form>
+        <label for="char-name">Name</label>
+        <input
+          type="text"
+          name="char-name"
+          id="char-name"
+          class="labels"
+          placeholder="opcional"
+        />
+
+        <label for="char-breed">Breed</label>
+        <select name="char-breed" id="char-breed" class="labels">
+          <option value="random-breed">Random</option>
+          <option value="homid">Homid</option>
+          <option value="lupus">Lupus</option>
+          <option value="metis">Metis</option>
+        </select>
+
+        <label for="char-auspice">Auspice</label>
+        <select name="char-auspice" id="char-auspice" class="labels">
+          <option value="random-auspice">Random</option>
+          <option value="ahroun">Ahroun</option>
+          <option value="theurge">Theurge</option>
+          <option value="galliard">Galliard</option>
+          <option value="ragabash">Ragabash</option>
+        </select>
+
+        <label for="char-tribe">Tribe</label>
+        <select name="char-tribe" id="char-tribe" class="labels">
+          <option value="random-auspice">Random</option>
+          <option value="bone-gnawers">Bone Gnawers</option>
+          <option value="children-of-gaia">Children of Gaia</option>
+          <option value="fianna">Fianna</option>
+          <option value="get-of-fenris">Get of Fenris</option>
+          <option value="glass-walkers">Glass Walkers</option>
+          <option value="red-talons">Red Talons</option>
+          <option value="shadow-lords">Shadow Lords</option>
+          <option value="silent-striders">Silent Striders</option>
+          <option value="silver-fangs">Silver Fangs</option>
+          <option value="stargazer">Stargazer</option>
+          <option value="uktena">Uktena</option>
+          <option value="wendigo">Wendigo</option>
+          <option value="black-spiral-dancers">Black Spiral Dancers</option>
+        </select>
+      </form>
+    </div>
+
+    <button class="generate-button" type="submit">GENERATE</button>
+    <div class="sheetTest"></div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
