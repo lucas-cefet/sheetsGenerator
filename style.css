@@ -2,36 +2,14 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  min-width: fit-content;
+  font-family: "Cormorant Garamond", serif;
 }
 
+h1,
+h2 {
+  font-family: "Cinzel", serif;
+}
 body {
-  min-height: 140vh;
+  font-family: "Cormorant Garamond", serif;
 }
 
-#basicInfo {
-  padding: 20px;
-  margin: 10px;
-
-  background: RGBA(0, 0, 0, 0.1);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  min-width: fit-content;
-
-  font-size: 1rem;
-  font-weight: bold;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.char-name {
-  font-style: italic;
-}
-
-.labels {
-  padding: 2px;
-  margin: 3px;
-}
