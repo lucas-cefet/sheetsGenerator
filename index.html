@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Cormorant+Garamond:wght@700&display=swap"
+      rel="stylesheet"
+    />
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
@@ -10,57 +15,416 @@
     <h1>Werewolf: the Apocalypse</h1>
     <h2>Sheet Generator</h2>
     <h2>Character Basic Information</h2>
-    <div id="basicInfo">
+    <div class="form">
       <form>
-        <label for="char-name">Name</label>
-        <input
-          type="text"
-          name="char-name"
-          id="char-name"
-          class="labels"
-          placeholder="opcional"
-        />
+        <div>
+          <label for="char-name">Name</label>
+          <input
+            type="text"
+            name="char-name"
+            id="char-name"
+            class="labels"
+            placeholder="opcional"
+          />
+        </div>
+        <div class="breeds">
+          <label for="char-breed">Breed</label>
+          <select name="char-breed" id="char-breed" class="char-breed">
+            <option value="0">Random</option>
+            <option value="1">Homid</option>
+            <option value="2">Lupus</option>
+            <option value="3">Metis</option>
+          </select>
+        </div>
 
-        <label for="char-breed">Breed</label>
-        <select name="char-breed" id="char-breed" class="labels">
-          <option value="random-breed">Random</option>
-          <option value="homid">Homid</option>
-          <option value="lupus">Lupus</option>
-          <option value="metis">Metis</option>
-        </select>
+        <div style="display: none" id="homid-gifts">
+          <label for="homid-gifts">Homid Gifs</label>
+          <select name="homid-gifts" class="homid-gifts">
+            <option value="0">City Running</option>
+            <option value="1">Stench and the City</option>
+            <option value="2">Master of Fire</option>
+            <option value="3">Persuasion</option>
+            <option value="4">Smell of Man</option>
+            <option value="5">Apecraft’s Blessings</option>
+            <option value="6">Weaver’s Eyes</option>
+          </select>
+        </div>
+
+        <div style="display: none" id="lupus-gifts">
+          <label for="lupus-gifts">Lupus Gifs</label>
+          <select name="lupus-gifts" class="lupus-gifts">
+            <option value="0">Hare’s Leap</option>
+            <option value="1">Heightened Senses</option>
+            <option value="2">Sense Wyld</option>
+            <option value="3">Sense Prey</option>
+            <option value="4">Predator’s Arsenal</option>
+            <option value="5">Prey Mind</option>
+            <option value="6">Find Water</option>
+            <option value="7">Black Mamba Strike</option>
+          </select>
+        </div>
+
+        <div style="display: none" id="metis-gifts">
+          <label for="metis-gifts">Metis Gifs</label>
+          <select name="metis-gifts" class="metis-gifts">
+            <option value="0">Sense Wyrm</option>
+            <option value="1">Primal Anger"</option>
+            <option value="2">Create Element</option>
+            <option value="3">Shed</option>
+          </select>
+        </div>
 
         <label for="char-auspice">Auspice</label>
-        <select name="char-auspice" id="char-auspice" class="labels">
-          <option value="random-auspice">Random</option>
-          <option value="ahroun">Ahroun</option>
-          <option value="theurge">Theurge</option>
-          <option value="galliard">Galliard</option>
-          <option value="ragabash">Ragabash</option>
+        <select name="char-auspice" id="char-auspice" class="char-auspice">
+          <option value="0">Random</option>
+          <option value="1">Ahroun</option>
+          <option value="2">Theurge</option>
+          <option value="3">Galliard</option>
+          <option value="4">Ragabash</option>
         </select>
 
-        <label for="char-tribe">Tribe</label>
-        <select name="char-tribe" id="char-tribe" class="labels">
-          <option value="random-auspice">Random</option>
-          <option value="bone-gnawers">Bone Gnawers</option>
-          <option value="children-of-gaia">Children of Gaia</option>
-          <option value="fianna">Fianna</option>
-          <option value="get-of-fenris">Get of Fenris</option>
-          <option value="glass-walkers">Glass Walkers</option>
-          <option value="red-talons">Red Talons</option>
-          <option value="shadow-lords">Shadow Lords</option>
-          <option value="silent-striders">Silent Striders</option>
-          <option value="silver-fangs">Silver Fangs</option>
-          <option value="stargazer">Stargazer</option>
-          <option value="uktena">Uktena</option>
-          <option value="wendigo">Wendigo</option>
-          <option value="black-spiral-dancers">Black Spiral Dancers</option>
-        </select>
+        <div style="display: none" id="ahroun-gifts">
+          <label for="ahroun-gifts">Ahroun Gifs</label>
+          <select name="ahroun-gifts" class="ahroun-gifts">
+            <option value="0">Razor Claws</option>
+            <option value="1">Inspiration / Grim Resolve</option>
+            <option value="2">Falling Touch</option>
+            <option value="3">Rhythm of War</option>
+            <option value="4">Spur Claws</option>
+            <option value="5">Empathy of Hatred</option>
+            <option value="6">Pack Tactics</option>
+          </select>
+        </div>
+
+        <div style="display: none" id="theurge-gifts">
+          <label for="theurge-gifts">Theurge Gifs</label>
+          <select name="theurge-gifts" class="theurge-gifts">
+            <option value="0">Sense Wyld</option>
+            <option value="1">Sense Wyrm</option>
+            <option value="2">Mother’s Touch</option>
+            <option value="3">Spirit Speech</option>
+            <option value="4">Umbral Tether</option>
+            <option value="5">Hear the Silence</option>
+            <option value="6">Sense Weaver</option>
+            <option value="7">Spirit Snare</option>
+            <option value="8">Sense Chiminage</option>
+            <option value="9">Airt Perception</option>
+          </select>
+        </div>
+
+        <div style="display: none" id="galliard-gifts">
+          <label for="galliard-gifts">Galliard Gifs</label>
+          <select name="galliard-gifts" class="galliard-gifts">
+            <option value="0">Beast Speech</option>
+            <option value="1">Perfect Recallr</option>
+            <option value="2">Canine Call</option>
+            <option value="3">Memory Circle</option>
+            <option value="4">Call of the Wyld</option>
+            <option value="5">Heightened Senses</option>
+          </select>
+        </div>
+
+        <div style="display: none" id="ragabash-gifts">
+          <label for="ragabash-gifts">Ragabash Gifs</label>
+          <select name="ragabash-gifts" class="ragabash-gifts">
+            <option value="0">Infectious Laughter</option>
+            <option value="1">Blur of the Milky Eye</option>
+            <option value="2">Liar’s Face</option>
+            <option value="3">Hush</option>
+            <option value="4">Disguise Fetish</option>
+            <option value="5">Open Seal</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="char-tribe">Tribe</label>
+          <select name="char-tribe" id="char-tribe" class="char-tribe">
+            <option value="0">Random</option>
+            <option value="1">Bone Gnawers</option>
+            <option value="2">Children of Gaia</option>
+            <option value="3">Fianna</option>
+            <option value="4">Get of Fenris</option>
+            <option value="5">Glass Walkers</option>
+            <option value="6">Red Talons</option>
+            <option value="7">Shadow Lords</option>
+            <option value="8">Silent Striders</option>
+            <option value="9">Silver Fangs</option>
+            <option value="10">Stargazer</option>
+            <option value="11">Uktena</option>
+            <option value="12">Wendigo</option>
+            <option value="13">Black Spiral Dancers</option>
+            <option value="14">Black Furies</option>
+          </select>
+        </div>
+
+        <div style="display: none" id="bone-gnawers-gifts">
+          <label for="bone-gnawers-gifts">Bone Gnawers Gifs</label>
+          <select name="bone-gnawers-gifts" class="bone-gnawers-gifts">
+            <option value="0">Desperate Strength</option>
+            <option value="1">Declamation</option>
+            <option value="2">The Mark</option>
+            <option value="3">Nose of the Hungry Hound</option>
+            <option value="4">Resist Toxin</option>
+            <option value="5">Cardboard Mansion</option>
+            <option value="6">Scent of Sweet Honey</option>
+            <option value="7">Tagalong</option>
+            <option value="8">Urban Ward</option>
+            <option value="9">Cooking</option>
+            <option value="10">Trash is Treasure</option>
+            <option value="11">Kitchen Chemistry</option>
+            <option value="12">Smell of Success</option>
+            <option value="13">Stench and the City</option>
+          </select>
+        </div>
+
+        <div style="display: none" id="children-of-gaia-gifts">
+          <label for="children-of-gaia-gifts">Children of Gaia Gifts</label>
+          <select name="children-of-gaia-gifts" class="children-of-gaia-gifts">
+            <option value="0">Mercy</option>
+            <option value="1">Brother’s Scent</option>
+            <option value="2">Water-Conning</option>
+            <option value="3">Jam Weapon</option>
+            <option value="4">Swallow Rage</option>
+            <option value="5">Resist Pain</option>
+            <option value="6">Mother’s Touch</option>
+          </select>
+        </div>
+
+        <div style="display: none" id="fianna-gifts">
+          <label for="fianna-gifts">Fianna Gifs</label>
+          <select name="fianna-gifts" class="fianna-gifts">
+            <option value="0">Hare’s Leap</option>
+            <option value="1">Faerie Light"</option>
+            <option value="2">Two Tongues</option>
+            <option value="3">Persuasion</option>
+          </select>
+        </div>
+
+        <div style="display: none" id="get-of-fenris-gifts">
+          <label for="get-of-fenris-gifts">Get of Fenris Gifs</label>
+          <select name="get-of-fenris-gifts" class="get-of-fenris-gifts">
+            <option value="0">Razor Claws</option>
+            <option value="1">Lightning Reflexes</option>
+            <option value="2">Safe Haven</option>
+            <option value="3">Snow Running</option>
+            <option value="4">Visage of Fenris</option>
+            <option value="5">Sigurd’s Stride</option>
+            <option value="6">Master of Fire</option>
+            <option value="7">Resist Pain</option>
+          </select>
+        </div>
+
+        <div style="display: none" id="glass-walkers-gifts">
+          <label for="glass-walkers-gifts">Glass Walkers Gifs</label>
+          <select name="glass-walkers-gifts" class="glass-walkers-gifts">
+            <option value="0">Sheng-Nong’s Eyes</option>
+            <option value="1">Agro Culture</option>
+            <option value="2">Last Ditch</option>
+            <option value="3">Network Terminal</option>
+            <option value="4">Tommy’s New Trick</option>
+            <option value="5">Plug and Play</option>
+            <option value="6">Diagnostics</option>
+            <option value="7">Weaver’s Eyes</option>
+            <option value="8">Control Simple Machine</option>
+            <option value="9">Trick Shot</option>
+            <option value="10">Budget Approval Process</option>
+            <option value="11">Cool Mind</option>
+            <option value="12">Well-Oiled Running</option>
+            <option value="13">Skyscraper Vision</option>
+            <option value="14">Persuasion</option>
+            <option value="15">Mother’s Touch</option>
+          </select>
+        </div>
+
+        <div style="display: none" id="red-talors-gift">
+          <label for="red-talors-gift">Red Talons Gifs</label>
+          <select name="red-talors-gift" class="red-talors-gift">
+            <option value="0">Beast Speech</option>
+            <option value="1">Scent of Running Water</option>
+            <option value="2">Hidden Killer</option>
+            <option value="3">Eye of the Hunter</option>
+            <option value="4">Prey’s Cry</option>
+            <option value="5">Cub’s Lesson</option>
+            <option value="6">Silence the Slain</option>
+            <option value="7">Wolf at the Door</option>
+            <option value="8">Purify Meat</option>
+            <option value="9">Speed of Thought</option>
+          </select>
+        </div>
+
+        <div style="display: none" id="shadow-lords-gifts">
+          <label for="shadow-lords-gifts">Shadow Lords Gifs</label>
+          <select name="shadow-lords-gifts" class="shadow-lords-gifts">
+            <option value="0">Dreams of a Thousand Cranes</option>
+            <option value="1">Fair Path</option>
+            <option value="2">Purify Scent</option>
+            <option value="3">Ears of the Bat</option>
+            <option value="4">Perceptive Servant</option>
+            <option value="5">Paranoia</option>
+            <option value="6">Whisper Catching</option>
+            <option value="7">Shadow Weaving</option>
+            <option value="8">Aura of Confidence</option>
+            <option value="9">Fatal Flaw</option>
+            <option value="10">Rains of Mercy</option>
+            <option value="11">Seizing the Edge</option>
+          </select>
+        </div>
+
+        <div style="display: none" id="silent-striders-gifts">
+          <label for="silent-striders-gifts">Silent Striders Gifs</label>
+          <select name="silent-striders-gifts" class="silent-striders-gifts">
+            <option value="0">Inspiration / Grim Resolve</option>
+            <option value="1">Sense Wyrm</option>
+            <option value="2">Speed of Thought</option>
+            <option value="3">Visions of Dust / Death Sight</option>
+            <option value="4">Silence</option>
+            <option value="5">Heavens’ Guidance</option>
+            <option value="4">Tireless Running</option>
+          </select>
+        </div>
+
+        <div style="display: none" id="silver-fangs-gifts">
+          <label for="silver-fangs-gifts">Silver Fangs Gifs</label>
+          <select name="silver-fangs-gifts" class="silver-fangs-gifts">
+            <option value="0">Inspiration / Grim Resolve</option>
+            <option value="1">Sense Wyrm</option>
+            <option value="2">Falcon’s Grasp / Implacable Grip</option>
+            <option value="3">Osprey’s Eye</option>
+            <option value="4">Full Moon Cleansing</option>
+            <option value="5">New Moon’s Laughter</option>
+            <option value="6">Harrier’s View</option>
+            <option value="7">Eye of the Falcon</option>
+            <option value="8">Lambent Flame</option>
+            <option value="9">Ice Dance</option>
+            <option value="10">
+              Call the Breeze / Wind of Buzzard’s Wings
+            </option>
+          </select>
+        </div>
+
+        <div style="display: none" id="stargazer-gifts">
+          <label for="stargazer-gifts">Stargazer Gifs</label>
+          <select name="stargazer-gifts" class="stargazer-gifts">
+            <option value="0">Falling Touch</option>
+            <option value="1">Sense Wyrm</option>
+            <option value="2">Imbalance</option>
+            <option value="3">Inner Strength</option>
+            <option value="4">Paper Butterfly</option>
+            <option value="5">Balance</option>
+            <option value="6">Iron Resolve</option>
+            <option value="7">Muladhara</option>
+            <option value="8">Seed of Speech</option>
+            <option value="9">Sense the Demonic</option>
+            <option value="10">Channeling</option>
+          </select>
+        </div>
+
+        <div style="display: none" id="uktena-gifts">
+          <label for="uktena-gifts">Uktena Gifs</label>
+          <select name="uktena-gifts" class="uktena-gifts">
+            <option value="0">Sense Wyrm</option>
+            <option value="1">Falcon’s Grasp / Implacable Grip</option>
+            <option value="2">Spirit Speech</option>
+            <option value="3">Fast Track</option>
+            <option value="4">Moonstruck Path</option>
+            <option value="5">Shroud</option>
+            <option value="6">Sense Magic</option>
+            <option value="7">Spirit of the Lizard</option>
+            <option value="8">Strut</option>
+            <option value="9">Pull Water</option>
+          </select>
+        </div>
+
+        <div style="display: none" id="wendigo-gifts">
+          <label for="wendigo-gifts">Wendigo Gifs</label>
+          <select name="wendigo-gifts" class="wendigo-gifts">
+            <option value="0">Call the Breeze / Wind of Buzzard’s Wings</option>
+            <option value="1">Lift-Your-Leg</option>
+            <option value="2">Nose-to-Tail</option>
+            <option value="3">Dead Stick</option>
+            <option value="4">Snow Sight</option>
+            <option value="5">Camouflage</option>
+            <option value="6">Ice Echo</option>
+            <option value="7">Beat of the Heart-Drum</option>
+          </select>
+        </div>
+
+        <div style="display: none" id="black-spiral-dancers-gifts">
+          <label for="black-spiral-dancers-gifts"
+            >Black Spiral Dancers Gifs</label
+          >
+          <select
+            name="black-spiral-dancers-gifts"
+            class="black-spiral-dancers-gifts"
+          >
+            <option value="0">Resist Toxin</option>
+            <option value="1">Repress Taint</option>
+            <option value="2">Bane Protector</option>
+            <option value="3">Spiral-Shadow Dance</option>
+            <option value="4">Bale Armor</option>
+            <option value="5">Toxic Claws</option>
+            <option value="6">Rathead</option>
+            <option value="7">Sense Wyrm</option>
+            <option value="8">Resist Pain</option>
+            <option value="9">Bale Aura</option>
+            <option value="10">Smell Fear</option>
+            <option value="11">Aura of Poison</option>
+            <option value="12">Ways of the Urban Wolf</option>
+            <option value="13">Bleed</option>
+            <option value="14">Acid Talons</option>
+            <option value="15">Bestowing the Predator’s Shadow</option>
+          </select>
+        </div>
+
+        <div style="display: none" id="black-furies-gifts">
+          <label for="black-furies-gifts">Black Furies Gifs</label>
+          <select name="black-furies-gifts" class="black-furies-gifts">
+            <option value="0">Wyld Resurgence</option>
+            <option value="1">True Shot</option>
+            <option value="2">Moonshadow</option>
+            <option value="3">Spirit Smuggler</option>
+            <option value="4">Breath of the Wyld</option>
+            <option value="5">Owl Speech</option>
+            <option value="6">Man’s Skin</option>
+            <option value="7">Watchful Eyes</option>
+            <option value="8">Arion’s Burden</option>
+            <option value="9">Heightened Senses</option>
+            <option value="10">Sense Wyld</option>
+            <option value="11">Sense Wyrm</option>
+          </select>
+        </div>
+
+        <div id="attributes-selection">
+          Attributes Points Distribution <br />
+          <label for="attributes-selection">Physical/Social/Mental</label>
+          <select name="attributes-selection" class="attributes-selection">
+            <option value="0">Random</option>
+            <option value="1">7/5/3</option>
+            <option value="2">7/3/5</option>
+            <option value="3">5/7/3</option>
+            <option value="4">3/7/5</option>
+            <option value="5">5/3/7</option>
+            <option value="6">3/5/7</option>
+          </select>
+        </div>
+
+        <div class="abilities">
+          Abilities Points Distribution <br />
+          <label for="abilities-selection">Talents/Skills/Knowledge</label>
+          <select name="abilities-selection" class="abilities-selection">
+            <option value="0">Random</option>
+            <option value="1">13/9/5</option>
+            <option value="2">13/5/9</option>
+            <option value="3">9/13/5</option>
+            <option value="4">5/13/9</option>
+            <option value="5">9/5/13</option>
+            <option value="6">5/9/13</option>
+          </select>
+        </div>
       </form>
     </div>
-
-    <button class="generate-button" type="submit">GENERATE</button>
-    <div class="sheetTest"></div>
 
     <script src="./app.js"></script>
   </body>
 </html>
+
