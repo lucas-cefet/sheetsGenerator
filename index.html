@@ -13,25 +13,21 @@
   </head>
   <body>
     <section id="basic-infoamrtion-form-left">
-      <div>
-        <h1><section id="logo-image-center">
-          <div>
-            <img src="/images/sheet_background.png" alt="Image not foud" id="logoimage" />
-          </div>
-        </section></h1>
+
+      <section id="logo-image-center">
+        <h1><img src="/images/sheet_background.png" alt="Image not foud" id="logoimage" /></h1>
+      </section>
+
+      <section class="left-info">
         <h2 style="text-align: center;">Sheet Generator</h2>
-        <h2>Character Basic Information</h2>
-        <div class="form" >
+        <h2 style="text-align: center;">Character Basic Information</h2>
+        <div class="form">
           <form>
             <div>
               <label for="char-name">Name</label>
-              <input
-                type="text"
-                name="char-name"
-                id="char-name"
-                class="labels"
-              />
+              <input type="text" name="char-name" id="char-name" class="labels" size="40" maxlength="20" /> 
             </div>
+            <br>
             <div class="breeds">
               <label for="char-breed">Breed</label>
               <select name="char-breed" id="char-breed" class="char-breed">
@@ -40,10 +36,11 @@
                 <option value="2">Lupus</option>
                 <option value="3">Metis</option>
               </select>
+              
             </div>
-
-            <div class="breed-options"></div>
-
+            
+            <div class="breed-options"><br></div>
+           
             <label for="char-auspice">Auspice</label>
             <select name="char-auspice" id="char-auspice" class="char-auspice">
               <option value="0">Random</option>
@@ -53,9 +50,9 @@
               <option value="4">Ragabash</option>
               <option value="5">Philodox</option>
             </select>
-
-            <div class="auspice-options"></div>
-
+        
+            <div class="auspice-options"><br></div>
+        
             <div>
               <label for="char-tribe">Tribe</label>
               <select name="char-tribe" id="char-tribe" class="char-tribe">
@@ -76,44 +73,88 @@
                 <option value="14">Black Furies</option>
               </select>
             </div>
-
+        
             <div class="tribe-options"></div>
-
-            <div id="attributes-selection">
-              <br />
-              Attributes Points Distribution <br />
-              <label for="attributes-selection">Physical/Social/Mental</label>
-              <select name="attributes-selection" class="attributes-selection">
-                <option value="0">Random</option>
-                <option value="1">7/5/3</option>
-                <option value="2">7/3/5</option>
-                <option value="3">5/7/3</option>
-                <option value="4">3/7/5</option>
-                <option value="5">5/3/7</option>
-                <option value="6">3/5/7</option>
-              </select>
+      </section>
+      <section class="left-info-attributes">
+          <h2 style="text-align: center;">Attributes Points Distribution</h2>
+          <section>
+            <section class="abilities-topics">
+              <div><label for="attributes-physical">Physical</label></div>
+              <div><label for="attributes-social">Social</label></div>
+              <div><label for="attributes-mental">Mental</label></div>
+            </section>
+            <section class="abilities-topics">
+              <div>
+                <input type="radio" name="attributes-physical" value="0" id="attributes7-physical"> 7
+                <input type="radio" name="attributes-physical" value="1" id="attributes5-physical"> 5
+                <input type="radio" name="attributes-physical" value="2" id="attributes3-physical"> 3
+              </div>
+              <div>
+                <input type="radio" name="attributes-social" value="0" id="attributes7-social"> 7
+                <input type="radio" name="attributes-social" value="1" id="attributes5-social"> 5
+                <input type="radio" name="attributes-social" value="2" id="attributes3-social"> 3
+              </div>
+              <div>
+                <input type="radio" name="attributes-mental" value="0" id="attributes7-mental"> 7
+                <input type="radio" name="attributes-mental" value="1" id="attributes5-mental"> 5
+                <input type="radio" name="attributes-mental" value="2" id="attributes3-mental"> 3
+              </div>
+            </section>
+          
+            <section class="left-info-attributes">
+              <div>
+                <input type="radio" name="attributes-random" value="0" id="attributes-random" checked="true"> Random </div>
+              
+              </div>
+            </section>
+          
+          </section>
+      </section>
+      <section class="left-info-attributes">
+        <h2 style="text-align: center;">Abilities Points Distribution</h2>
+        <section>
+          <section class="abilities-topics">
+            <div><label for="abilities-talents">Talents</label></div>
+            <div><label for="abilities-skills">Skills</label></div>
+            <div><label for="abilities-knowledge">Knowledge</label></div>
+          </section>
+          <section class="abilities-topics">
+            <div>
+              <input type="radio" name="abilities-talents" value="0" id="abilities13-talents"> 13
+              <input type="radio" name="abilities-talents" value="1" id="abilities7-talents"> 9
+              <input type="radio" name="abilities-talents" value="2" id="abilities5-talents"> 5
             </div>
-
-            <div class="abilities">
-              <br />
-              Abilities Points Distribution <br />
-              <label for="abilities-selection">Talents/Skills/Knowledge</label>
-              <select name="abilities-selection" class="abilities-selection">
-                <option value="0">Random</option>
-                <option value="1">13/9/5</option>
-                <option value="2">13/5/9</option>
-                <option value="3">9/13/5</option>
-                <option value="4">5/13/9</option>
-                <option value="5">9/5/13</option>
-                <option value="6">5/9/13</option>
-              </select>
+            <div>
+              <input type="radio" name="abilities-skills" value="0" id="abilities13-skills"> 13
+              <input type="radio" name="abilities-skills" value="1" id="abilities7-skills"> 9 
+              <input type="radio" name="abilities-skills" value="2" id="abilities5-skills"> 5
             </div>
-            <div style="text-align: center">
-            <button class="generate-btn" >GENERATE</button></div>
-          </form>
-        </div>
-      </div>
+            <div>
+              <input type="radio" name="abilities-knowledge" value="0" id="abilities13-knowledge"> 13
+              <input type="radio" name="abilities-knowledge" value="1" id="abilities7-knowledge"> 9
+              <input type="radio" name="abilities-knowledge" value="2" id="abilities5-knowledge"> 5
+            </div>
+          </section>
+        
+          <section class="left-info-attributes">
+            <div>
+              <input type="radio" name="abilities-random" value="0" id="abilities-random" checked="true"> Random </div>
+            
+            </div>
+          </section>
+        
+        </section>
+      </section>
+      <section class="left-info">
+        <div style="text-align: center">
+          <button class="generate-btn">GENERATE</button>
+        <button class="reset-all">RESET</button>
+        </form>
+      </section>
+
     </section>
+      
     <section id="sheet-structure-right">
       
       <section class="sheetpages">
@@ -807,3 +848,4 @@
     <script src="./app.js"></script>
   </body>
 </html>
+
