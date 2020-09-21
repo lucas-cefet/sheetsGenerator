@@ -5,7 +5,6 @@ const breedOptions = document.querySelector(".breed-options");
 const auspiceOptions = document.querySelector(".auspice-options");
 const tribeOptions = document.querySelector(".tribe-options");
 const auspiceSelection = document.querySelector(".char-auspice");
-const generateButton = document.querySelector(".generate-btn");
 const points = document.querySelector(".points");
 
 const sheetFirstName = document.getElementById("sheet-first-name");
@@ -15,6 +14,11 @@ const sheetAuspice = document.getElementById("sheet-auspice");
 const sheetTribe = document.getElementById("sheet-tribe");
 const sheetConcept = document.getElementById("sheet-concept");
 const charName = document.getElementById("char-name");
+
+//BUTTONS SELECTORS
+
+const generateButton = document.querySelector(".generate-btn");
+const resetAll = document.querySelector(".reset-all");
 
 //GIFTS
 
@@ -914,6 +918,36 @@ const willpower8 = document.getElementById("willpower8");
 const willpower9 = document.getElementById("willpower9");
 const willpower10 = document.getElementById("willpower10");
 
+// ATTRIBUTES RADIO SELECTORS
+const physical7 = document.getElementById("attributes7-physical");
+const social7 = document.getElementById("attributes7-social");
+const mental7 = document.getElementById("attributes7-mental");
+
+const physical5 = document.getElementById("attributes5-physical");
+const social5 = document.getElementById("attributes5-social");
+const mental5 = document.getElementById("attributes5-mental");
+
+const physical3 = document.getElementById("attributes3-physical");
+const social3 = document.getElementById("attributes3-social");
+const mental3 = document.getElementById("attributes3-mental");
+
+const randomAttributes = document.getElementById("attributes-random");
+
+// ABILITIES RADIO SELECTORS
+const talents13 = document.getElementById("abilities13-talents");
+const skills13 = document.getElementById("abilities13-skills");
+const knowledge13 = document.getElementById("abilities13-knowledge");
+
+const talents7 = document.getElementById("abilities7-talents");
+const skills7 = document.getElementById("abilities7-skills");
+const knowledge7 = document.getElementById("abilities7-knowledge");
+
+const talents5 = document.getElementById("abilities5-talents");
+const skills5 = document.getElementById("abilities5-skills");
+const knowledge5 = document.getElementById("abilities5-knowledge");
+
+const randomAbilities = document.getElementById("abilities-random");
+
 const genericSheet = {
   basicInformation: {
     name: "",
@@ -1045,7 +1079,37 @@ const genericSheet = {
 breedSelection.addEventListener("change", showBreedGifts);
 auspiceSelection.addEventListener("change", showAuspiceGifts);
 tribeSelection.addEventListener("change", showTribeGifts);
+
 generateButton.addEventListener("click", generateSheet);
+resetAll.addEventListener("click", cleanWithReset);
+
+physical7.addEventListener("change", blockPhysicalFiveThree);
+social7.addEventListener("change", blockSocialFiveThree);
+mental7.addEventListener("change", blockMentalFiveThree);
+
+physical5.addEventListener("change", blockPhysicalThreeSeven);
+social5.addEventListener("change", blockSocialThreeSeven);
+mental5.addEventListener("change", blockMentalThreeSeven);
+
+physical3.addEventListener("change", blockPhysicalFiveSeven);
+social3.addEventListener("change", blockSocialFiveSeven);
+mental3.addEventListener("change", blockMentalFiveSeven);
+
+randomAttributes.addEventListener("change", enableAttributesRadios);
+
+talents13.addEventListener("change", blockTalentsFiveSeven);
+skills13.addEventListener("change", blockSkillsFiveSeven);
+knowledge13.addEventListener("change", blockKnowledgeFiveSeven);
+
+talents7.addEventListener("change", blockTalents13Five);
+skills7.addEventListener("change", blockSkills13Five);
+knowledge7.addEventListener("change", blockKnowledge13Five);
+
+talents5.addEventListener("change", blockTalents13Seven);
+skills5.addEventListener("change", blockSkills13Seven);
+knowledge5.addEventListener("change", blockKnowledge13Seven);
+
+randomAbilities.addEventListener("change", enableAbilitiesRadios);
 
 // Functions
 // CLEANING SHEET
@@ -1165,6 +1229,61 @@ function cleanRenown() {
   willpower8.innerHTML = '<img src="/images/light-circle.png" />';
   willpower9.innerHTML = '<img src="/images/light-circle.png" />';
   willpower10.innerHTML = '<img src="/images/light-circle.png" />';
+}
+function cleanWithReset() {
+  randomAttributes.checked = true;
+
+  physical3.checked = false;
+  physical5.checked = false;
+  physical7.checked = false;
+
+  physical3.disabled = false;
+  physical5.disabled = false;
+  physical7.disabled = false;
+
+  social3.checked = false;
+  social5.checked = false;
+  social7.checked = false;
+
+  social3.disabled = false;
+  social5.disabled = false;
+  social7.disabled = false;
+
+  mental3.checked = false;
+  mental5.checked = false;
+  mental7.checked = false;
+
+  mental3.disabled = false;
+  mental5.disabled = false;
+  mental7.disabled = false;
+}
+function enableAttributesRadios() {
+  physical3.checked = false;
+  physical5.checked = false;
+  physical7.checked = false;
+
+  physical3.disabled = false;
+  physical5.disabled = false;
+  physical7.disabled = false;
+
+  social3.checked = false;
+  social5.checked = false;
+  social7.checked = false;
+
+  social3.disabled = false;
+  social5.disabled = false;
+  social7.disabled = false;
+
+  mental3.checked = false;
+  mental5.checked = false;
+  mental7.checked = false;
+
+  mental3.disabled = false;
+  mental5.disabled = false;
+  mental7.disabled = false;
+
+  randomAttributes.checked = true;
+  randomAttributes.disabled = false;
 }
 // SHOW HIDDEN DROPBOX
 function showBreedGifts(event) {
@@ -1419,7 +1538,7 @@ function showTribeGifts(event) {
     tribeLabel.setAttribute("id", "black-spiral-label");
     tribeLabel.innerHTML = "Black Spiral Dancers Gifts ";
     tribeOptions.appendChild(tribeLabel);
-    document.getElementById("black-spiral-label").style.fontSize = "small";
+    document.getElementById("black-spiral-label").style.fontSize = "75%";
     for (var i = 0; i < tribeGifts.blackSpiralDancers.length; i++) {
       var gift = document.createElement("option");
       gift.value = i;
@@ -2026,6 +2145,287 @@ function outputGifts() {
     }
   }
 }
+function blockPhysicalFiveThree() {
+  randomAttributes.checked = false;
+  physical5.disabled = true;
+  physical3.disabled = true;
+  if (social7.checked == true) {
+    social5.disabled = false;
+    social3.disabled = false;
+    social7.checked = false;
+  } else if (mental7.checked == true) {
+    mental5.disabled = false;
+    mental3.disabled = false;
+    mental7.checked = false;
+  }
+}
+function blockSocialFiveThree() {
+  randomAttributes.checked = false;
+  social5.disabled = true;
+  social3.disabled = true;
+  if (physical7.checked == true) {
+    physical5.disabled = false;
+    physical3.disabled = false;
+    physical7.checked = false;
+  } else if (mental7.checked == true) {
+    mental5.disabled = false;
+    mental3.disabled = false;
+    mental7.checked = false;
+  }
+}
+function blockMentalFiveThree() {
+  randomAttributes.checked = false;
+  mental5.disabled = true;
+  mental3.disabled = true;
+  if (physical7.checked == true) {
+    physical5.disabled = false;
+    physical3.disabled = false;
+    physical7.checked = false;
+  } else if (social7.checked == true) {
+    social5.disabled = false;
+    social3.disabled = false;
+    social7.checked = false;
+  }
+}
+function blockPhysicalThreeSeven() {
+  randomAttributes.checked = false;
+  physical7.disabled = true;
+  physical3.disabled = true;
+  if (mental5.checked == true) {
+    mental7.disabled = false;
+    mental3.disabled = false;
+    mental5.checked = false;
+  } else if (social5.checked == true) {
+    social7.disabled = false;
+    social3.disabled = false;
+    social5.checked = false;
+  }
+}
+function blockSocialThreeSeven() {
+  randomAttributes.checked = false;
+  social7.disabled = true;
+  social3.disabled = true;
+  if (physical5.checked == true) {
+    physical7.disabled = false;
+    physical3.disabled = false;
+    physical5.checked = false;
+  } else if (mental5.checked == true) {
+    mental7.disabled = false;
+    mental3.disabled = false;
+    mental5.checked = false;
+  }
+}
+function blockMentalThreeSeven() {
+  randomAttributes.checked = false;
+  mental7.disabled = true;
+  mental3.disabled = true;
+  if (physical5.checked == true) {
+    physical7.disabled = false;
+    physical3.disabled = false;
+    physical5.checked = false;
+  } else if (social5.checked == true) {
+    social7.disabled = false;
+    social3.disabled = false;
+    social5.checked = false;
+  }
+}
+function blockMentalFiveSeven() {
+  randomAttributes.checked = false;
+  mental7.disabled = true;
+  mental5.disabled = true;
+  if (social3.checked == true) {
+    social7.disabled = false;
+    social5.disabled = false;
+    social3.checked = false;
+  } else if (physical3.checked == true) {
+    physical7.disabled = false;
+    physical5.disabled = false;
+    physical3.checked = false;
+  }
+}
+function blockSocialFiveSeven() {
+  randomAttributes.checked = false;
+  social7.disabled = true;
+  social5.disabled = true;
+  if (mental3.checked == true) {
+    mental7.disabled = false;
+    mental5.disabled = false;
+    mental3.checked = false;
+  } else if (physical3.checked == true) {
+    physical7.disabled = false;
+    physical5.disabled = false;
+    physical3.checked = false;
+  }
+}
+function blockPhysicalFiveSeven() {
+  randomAttributes.checked = false;
+  physical7.disabled = true;
+  physical5.disabled = true;
+  if (mental3.checked == true) {
+    mental7.disabled = false;
+    mental5.disabled = false;
+    mental3.checked = false;
+  } else if (social3.checked == true) {
+    social7.disabled = false;
+    social5.disabled = false;
+    social3.checked = false;
+  }
+}
+
+function blockTalentsFiveSeven() {
+  randomAbilities.checked = false;
+  talents5.disabled = true;
+  talents7.disabled = true;
+  if (knowledge13.checked == true) {
+    knowledge7.disabled = false;
+    knowledge5.disabled = false;
+    knowledge13.checked = false;
+  } else if (skills13.checked == true) {
+    skills7.disabled = false;
+    skills5.disabled = false;
+    skills13.checked = false;
+  }
+}
+function blockSkillsFiveSeven() {
+  randomAbilities.checked = false;
+  skills5.disabled = true;
+  skills7.disabled = true;
+  if (knowledge13.checked == true) {
+    knowledge7.disabled = false;
+    knowledge5.disabled = false;
+    knowledge13.checked = false;
+  } else if (talents13.checked == true) {
+    talents7.disabled = false;
+    talents5.disabled = false;
+    talents13.checked = false;
+  }
+}
+function blockKnowledgeFiveSeven() {
+  randomAbilities.checked = false;
+  knowledge5.disabled = true;
+  knowledge7.disabled = true;
+  if (talents13.checked == true) {
+    talents7.disabled = false;
+    talents5.disabled = false;
+    talents13.checked = false;
+  } else if (skills13.checked == true) {
+    skills7.disabled = false;
+    skills5.disabled = false;
+    skills13.checked = false;
+  }
+}
+function blockTalents13Five() {
+  randomAbilities.checked = false;
+  talents13.disabled = true;
+  talents5.disabled = true;
+  if (knowledge7.checked == true) {
+    knowledge13.disabled = false;
+    knowledge5.disabled = false;
+    knowledge7.checked = false;
+  } else if (skills7.checked == true) {
+    skills13.disabled = false;
+    skills5.disabled = false;
+    skills7.checked = false;
+  }
+}
+function blockSkills13Five() {
+  randomAbilities.checked = false;
+  skills13.disabled = true;
+  skills5.disabled = true;
+  if (knowledge7.checked == true) {
+    knowledge13.disabled = false;
+    knowledge5.disabled = false;
+    knowledge7.checked = false;
+  } else if (talents7.checked == true) {
+    talents13.disabled = false;
+    talents5.disabled = false;
+    talents7.checked = false;
+  }
+}
+function blockKnowledge13Five() {
+  randomAbilities.checked = false;
+  knowledge13.disabled = true;
+  knowledge5.disabled = true;
+  if (talents7.checked == true) {
+    talents13.disabled = false;
+    talents5.disabled = false;
+    talents7.checked = false;
+  } else if (skills7.checked == true) {
+    skills13.disabled = false;
+    skills5.disabled = false;
+    skills7.checked = false;
+  }
+}
+function blockTalents13Seven() {
+  randomAbilities.checked = false;
+  talents13.disabled = true;
+  talents7.disabled = true;
+  if (knowledge5.checked == true) {
+    knowledge13.disabled = false;
+    knowledge7.disabled = false;
+    knowledge5.checked = false;
+  } else if (skills5.checked == true) {
+    skills13.disabled = false;
+    skills7.disabled = false;
+    skills5.checked = false;
+  }
+}
+function blockSkills13Seven() {
+  randomAbilities.checked = false;
+  skills13.disabled = true;
+  skills7.disabled = true;
+  if (knowledge5.checked == true) {
+    knowledge13.disabled = false;
+    knowledge7.disabled = false;
+    knowledge5.checked = false;
+  } else if (talents5.checked == true) {
+    talents13.disabled = false;
+    talents7.disabled = false;
+    talents5.checked = false;
+  }
+}
+function blockKnowledge13Seven() {
+  randomAbilities.checked = false;
+  knowledge13.disabled = true;
+  knowledge7.disabled = true;
+  if (talents5.checked == true) {
+    talents13.disabled = false;
+    talents7.disabled = false;
+    talents5.checked = false;
+  } else if (skills5.checked == true) {
+    skills13.disabled = false;
+    skills7.disabled = false;
+    skills5.checked = false;
+  }
+}
+function enableAbilitiesRadios() {
+  talents13.checked = false;
+  talents7.checked = false;
+  talents5.checked = false;
+
+  talents13.disabled = false;
+  talents7.disabled = false;
+  talents5.disabled = false;
+
+  skills13.checked = false;
+  skills7.checked = false;
+  skills5.checked = false;
+
+  skills13.disabled = false;
+  skills7.disabled = false;
+  skills5.disabled = false;
+
+  knowledge5.checked = false;
+  knowledge7.checked = false;
+  knowledge13.checked = false;
+
+  knowledge5.disabled = false;
+  knowledge7.disabled = false;
+  knowledge13.disabled = false;
+
+  randomAbilities.checked = true;
+  randomAbilities.disabled = false;
+}
 
 function generateSheet(event) {
   event.preventDefault();
@@ -2034,11 +2434,16 @@ function generateSheet(event) {
   cleanAbilities();
   cleanAdvantages();
   cleanRenown();
+
   outputAuspices();
   outputBreeds();
   outputConcepts();
   outputNames();
   outputTribes();
   outputGifts();
+
+  enableAttributesRadios();
+  enableAbilitiesRadios();
 }
+
 
