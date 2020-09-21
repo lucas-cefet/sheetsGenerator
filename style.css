@@ -85,10 +85,22 @@ body {
 
 #logo-image-center {
   min-width: 100%;
-  float: left;
   box-sizing: border-box; /* so the borders don't mess up the alignment */
+  height: 13%;
+}
+.left-info {
+  max-width: 99%;
+  box-sizing: border-box; /* so the borders don't mess up the alignment */
+  height: 30%;
+  font-size: 98%;
 }
 
+.left-info-attributes {
+  max-width: 99%;
+  box-sizing: border-box; /* so the borders don't mess up the alignment */
+  height: 13%;
+  font-size: 98%;
+}
 .basics {
   padding: 0;
   border: 0;
@@ -168,5 +180,11 @@ body {
 .background-information {
   box-sizing: border-box; /* so the borders don't mess up the alignment */
   width: 100%;
+  float: left;
+}
+
+.attributes-abilites {
+  box-sizing: border-box;
+  width: 50%;
   float: left;
 }
