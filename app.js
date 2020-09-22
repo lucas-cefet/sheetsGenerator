@@ -1230,61 +1230,7 @@ function cleanRenown() {
   willpower9.innerHTML = '<img src="/images/light-circle.png" />';
   willpower10.innerHTML = '<img src="/images/light-circle.png" />';
 }
-function cleanWithReset() {
-  randomAttributes.checked = true;
 
-  physical3.checked = false;
-  physical5.checked = false;
-  physical7.checked = false;
-
-  physical3.disabled = false;
-  physical5.disabled = false;
-  physical7.disabled = false;
-
-  social3.checked = false;
-  social5.checked = false;
-  social7.checked = false;
-
-  social3.disabled = false;
-  social5.disabled = false;
-  social7.disabled = false;
-
-  mental3.checked = false;
-  mental5.checked = false;
-  mental7.checked = false;
-
-  mental3.disabled = false;
-  mental5.disabled = false;
-  mental7.disabled = false;
-}
-function enableAttributesRadios() {
-  physical3.checked = false;
-  physical5.checked = false;
-  physical7.checked = false;
-
-  physical3.disabled = false;
-  physical5.disabled = false;
-  physical7.disabled = false;
-
-  social3.checked = false;
-  social5.checked = false;
-  social7.checked = false;
-
-  social3.disabled = false;
-  social5.disabled = false;
-  social7.disabled = false;
-
-  mental3.checked = false;
-  mental5.checked = false;
-  mental7.checked = false;
-
-  mental3.disabled = false;
-  mental5.disabled = false;
-  mental7.disabled = false;
-
-  randomAttributes.checked = true;
-  randomAttributes.disabled = false;
-}
 // SHOW HIDDEN DROPBOX
 function showBreedGifts(event) {
   event.preventDefault();
@@ -1559,6 +1505,7 @@ function showTribeGifts(event) {
     tribeOptions.appendChild(tribeSelect);
   }
 }
+
 // SHEET OUTPUT
 function outputNames() {
   var verifyName = charName.value.length;
@@ -1575,6 +1522,7 @@ function outputNames() {
     sheetLastName.innerText = lastNameList[chosenLastName];
   } else {
     sheetFirstName.innerText = charName.value;
+    sheetLastName.innerText = "";
   }
 }
 function outputTribes() {
@@ -2145,6 +2093,933 @@ function outputGifts() {
     }
   }
 }
+
+//ATTRIBUTES OUTPUT
+function outputAttributesPoints() {
+  if (randomAttributes.checked == true) {
+    var randomPhysicalOption = Math.floor(Math.random() * 3);
+    var randomSocialOption = Math.floor(Math.random() * 3);
+    var randomMentalOption = Math.floor(Math.random() * 3);
+    if (
+      randomPhysicalOption == randomSocialOption &&
+      randomSocialOption == randomMentalOption
+    ) {
+      randomPhysicalOption = 0;
+      randomSocialOption = 1;
+      randomMentalOption = 2;
+    } else if (randomPhysicalOption == randomSocialOption) {
+      randomPhysicalOption = 1;
+      randomSocialOption = 2;
+      randomMentalOption = 0;
+    } else if (randomPhysicalOption == randomMentalOption) {
+      randomPhysicalOption = 2;
+      randomSocialOption = 1;
+      randomMentalOption = 0;
+    } else if (randomSocialOption == randomMentalOption) {
+      randomPhysicalOption = 0;
+      randomSocialOption = 2;
+      randomMentalOption = 1;
+    }
+  }
+
+  if (physical7.checked == true || randomPhysicalOption == 0) {
+    var physicalOptions = Math.floor(Math.random() * 12);
+    switch (physicalOptions) {
+      case 0:
+        str2.innerHTML = '<img src="/images/bold-circle.png" />';
+        str3.innerHTML = '<img src="/images/bold-circle.png" />';
+        str4.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        dex2.innerHTML = '<img src="/images/bold-circle.png" />';
+        dex3.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        stamina2.innerHTML = '<img src="/images/bold-circle.png" />';
+        stamina3.innerHTML = '<img src="/images/bold-circle.png" />';
+        break;
+      case 1:
+        dex2.innerHTML = '<img src="/images/bold-circle.png" />';
+        dex3.innerHTML = '<img src="/images/bold-circle.png" />';
+        dex4.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        str2.innerHTML = '<img src="/images/bold-circle.png" />';
+        str3.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        stamina2.innerHTML = '<img src="/images/bold-circle.png" />';
+        stamina3.innerHTML = '<img src="/images/bold-circle.png" />';
+        break;
+      case 2:
+        stamina2.innerHTML = '<img src="/images/bold-circle.png" />';
+        stamina3.innerHTML = '<img src="/images/bold-circle.png" />';
+        stamina4.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        dex2.innerHTML = '<img src="/images/bold-circle.png" />';
+        dex3.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        str2.innerHTML = '<img src="/images/bold-circle.png" />';
+        str3.innerHTML = '<img src="/images/bold-circle.png" />';
+        break;
+      case 3:
+        str2.innerHTML = '<img src="/images/bold-circle.png" />';
+        str3.innerHTML = '<img src="/images/bold-circle.png" />';
+        str4.innerHTML = '<img src="/images/bold-circle.png" />';
+        str5.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        dex2.innerHTML = '<img src="/images/bold-circle.png" />';
+        dex3.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        stamina2.innerHTML = '<img src="/images/bold-circle.png" />';
+        break;
+      case 4:
+        str2.innerHTML = '<img src="/images/bold-circle.png" />';
+        str3.innerHTML = '<img src="/images/bold-circle.png" />';
+        str4.innerHTML = '<img src="/images/bold-circle.png" />';
+        str5.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        dex2.innerHTML = '<img src="/images/bold-circle.png" />';
+        dex3.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        stamina2.innerHTML = '<img src="/images/bold-circle.png" />';
+        break;
+      case 5:
+        dex2.innerHTML = '<img src="/images/bold-circle.png" />';
+        dex3.innerHTML = '<img src="/images/bold-circle.png" />';
+        dex4.innerHTML = '<img src="/images/bold-circle.png" />';
+        dex5.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        str2.innerHTML = '<img src="/images/bold-circle.png" />';
+        str3.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        stamina2.innerHTML = '<img src="/images/bold-circle.png" />';
+        break;
+      case 6:
+        dex2.innerHTML = '<img src="/images/bold-circle.png" />';
+        dex3.innerHTML = '<img src="/images/bold-circle.png" />';
+        dex4.innerHTML = '<img src="/images/bold-circle.png" />';
+        dex5.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        str2.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        stamina2.innerHTML = '<img src="/images/bold-circle.png" />';
+        stamina3.innerHTML = '<img src="/images/bold-circle.png" />';
+        break;
+      case 7:
+        stamina2.innerHTML = '<img src="/images/bold-circle.png" />';
+        stamina3.innerHTML = '<img src="/images/bold-circle.png" />';
+        stamina4.innerHTML = '<img src="/images/bold-circle.png" />';
+        stamina5.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        str2.innerHTML = '<img src="/images/bold-circle.png" />';
+        str3.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        dex2.innerHTML = '<img src="/images/bold-circle.png" />';
+        break;
+      case 8:
+        stamina2.innerHTML = '<img src="/images/bold-circle.png" />';
+        stamina3.innerHTML = '<img src="/images/bold-circle.png" />';
+        stamina4.innerHTML = '<img src="/images/bold-circle.png" />';
+        stamina5.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        str2.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        dex2.innerHTML = '<img src="/images/bold-circle.png" />';
+        dex3.innerHTML = '<img src="/images/bold-circle.png" />';
+        break;
+      case 9:
+        str2.innerHTML = '<img src="/images/bold-circle.png" />';
+        str3.innerHTML = '<img src="/images/bold-circle.png" />';
+        str4.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        stamina2.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        dex2.innerHTML = '<img src="/images/bold-circle.png" />';
+        dex3.innerHTML = '<img src="/images/bold-circle.png" />';
+        dex4.innerHTML = '<img src="/images/bold-circle.png" />';
+        break;
+      case 10:
+        str2.innerHTML = '<img src="/images/bold-circle.png" />';
+        str3.innerHTML = '<img src="/images/bold-circle.png" />';
+        str4.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        stamina2.innerHTML = '<img src="/images/bold-circle.png" />';
+        stamina3.innerHTML = '<img src="/images/bold-circle.png" />';
+        stamina4.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        dex2.innerHTML = '<img src="/images/bold-circle.png" />';
+        break;
+      case 11:
+        dex2.innerHTML = '<img src="/images/bold-circle.png" />';
+        dex3.innerHTML = '<img src="/images/bold-circle.png" />';
+        dex4.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        stamina2.innerHTML = '<img src="/images/bold-circle.png" />';
+        stamina3.innerHTML = '<img src="/images/bold-circle.png" />';
+        stamina4.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        str2.innerHTML = '<img src="/images/bold-circle.png" />';
+        break;
+    }
+  } else if (physical5.checked == true || randomPhysicalOption == 1) {
+    var physicalOptions = Math.floor(Math.random() * 12);
+    switch (physicalOptions) {
+      case 0:
+        str2.innerHTML = '<img src="/images/bold-circle.png" />';
+        str3.innerHTML = '<img src="/images/bold-circle.png" />';
+        str4.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        dex2.innerHTML = '<img src="/images/bold-circle.png" />';
+        dex3.innerHTML = '<img src="/images/bold-circle.png" />';
+        break;
+      case 1:
+        str2.innerHTML = '<img src="/images/bold-circle.png" />';
+        str3.innerHTML = '<img src="/images/bold-circle.png" />';
+        str4.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        stamina2.innerHTML = '<img src="/images/bold-circle.png" />';
+        stamina3.innerHTML = '<img src="/images/bold-circle.png" />';
+        break;
+      case 2:
+        str2.innerHTML = '<img src="/images/bold-circle.png" />';
+        str3.innerHTML = '<img src="/images/bold-circle.png" />';
+        str4.innerHTML = '<img src="/images/bold-circle.png" />';
+        str5.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        dex2.innerHTML = '<img src="/images/bold-circle.png" />';
+        break;
+      case 3:
+        str2.innerHTML = '<img src="/images/bold-circle.png" />';
+        str3.innerHTML = '<img src="/images/bold-circle.png" />';
+        str4.innerHTML = '<img src="/images/bold-circle.png" />';
+        str5.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        stamina2.innerHTML = '<img src="/images/bold-circle.png" />';
+        break;
+      case 4:
+        dex2.innerHTML = '<img src="/images/bold-circle.png" />';
+        dex3.innerHTML = '<img src="/images/bold-circle.png" />';
+        dex4.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        str2.innerHTML = '<img src="/images/bold-circle.png" />';
+        str3.innerHTML = '<img src="/images/bold-circle.png" />';
+        break;
+      case 5:
+        dex2.innerHTML = '<img src="/images/bold-circle.png" />';
+        dex3.innerHTML = '<img src="/images/bold-circle.png" />';
+        dex4.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        stamina2.innerHTML = '<img src="/images/bold-circle.png" />';
+        stamina3.innerHTML = '<img src="/images/bold-circle.png" />';
+        break;
+      case 6:
+        dex2.innerHTML = '<img src="/images/bold-circle.png" />';
+        dex3.innerHTML = '<img src="/images/bold-circle.png" />';
+        dex4.innerHTML = '<img src="/images/bold-circle.png" />';
+        dex5.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        str2.innerHTML = '<img src="/images/bold-circle.png" />';
+        break;
+      case 7:
+        dex2.innerHTML = '<img src="/images/bold-circle.png" />';
+        dex3.innerHTML = '<img src="/images/bold-circle.png" />';
+        dex4.innerHTML = '<img src="/images/bold-circle.png" />';
+        dex5.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        stamina2.innerHTML = '<img src="/images/bold-circle.png" />';
+        break;
+      case 8:
+        stamina2.innerHTML = '<img src="/images/bold-circle.png" />';
+        stamina3.innerHTML = '<img src="/images/bold-circle.png" />';
+        stamina4.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        dex2.innerHTML = '<img src="/images/bold-circle.png" />';
+        dex3.innerHTML = '<img src="/images/bold-circle.png" />';
+        break;
+      case 9:
+        stamina2.innerHTML = '<img src="/images/bold-circle.png" />';
+        stamina3.innerHTML = '<img src="/images/bold-circle.png" />';
+        stamina4.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        str2.innerHTML = '<img src="/images/bold-circle.png" />';
+        str3.innerHTML = '<img src="/images/bold-circle.png" />';
+        break;
+      case 10:
+        stamina2.innerHTML = '<img src="/images/bold-circle.png" />';
+        stamina3.innerHTML = '<img src="/images/bold-circle.png" />';
+        stamina4.innerHTML = '<img src="/images/bold-circle.png" />';
+        stamina5.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        dex2.innerHTML = '<img src="/images/bold-circle.png" />';
+        break;
+      case 11:
+        stamina2.innerHTML = '<img src="/images/bold-circle.png" />';
+        stamina3.innerHTML = '<img src="/images/bold-circle.png" />';
+        stamina4.innerHTML = '<img src="/images/bold-circle.png" />';
+        stamina5.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        str2.innerHTML = '<img src="/images/bold-circle.png" />';
+        break;
+    }
+  } else if (physical3.checked == true || randomPhysicalOption == 2) {
+    var physicalOptions = Math.floor(Math.random() * 10);
+    switch (physicalOptions) {
+      case 0:
+        str2.innerHTML = '<img src="/images/bold-circle.png" />';
+        str3.innerHTML = '<img src="/images/bold-circle.png" />';
+        str4.innerHTML = '<img src="/images/bold-circle.png" />';
+        break;
+      case 1:
+        stamina2.innerHTML = '<img src="/images/bold-circle.png" />';
+        stamina3.innerHTML = '<img src="/images/bold-circle.png" />';
+        stamina4.innerHTML = '<img src="/images/bold-circle.png" />';
+        break;
+      case 2:
+        dex2.innerHTML = '<img src="/images/bold-circle.png" />';
+        dex3.innerHTML = '<img src="/images/bold-circle.png" />';
+        dex4.innerHTML = '<img src="/images/bold-circle.png" />';
+        break;
+      case 3:
+        str2.innerHTML = '<img src="/images/bold-circle.png" />';
+        str3.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        dex2.innerHTML = '<img src="/images/bold-circle.png" />';
+        break;
+      case 4:
+        str2.innerHTML = '<img src="/images/bold-circle.png" />';
+        str3.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        stamina2.innerHTML = '<img src="/images/bold-circle.png" />';
+        break;
+      case 5:
+        stamina2.innerHTML = '<img src="/images/bold-circle.png" />';
+        stamina3.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        str2.innerHTML = '<img src="/images/bold-circle.png" />';
+        break;
+      case 6:
+        stamina2.innerHTML = '<img src="/images/bold-circle.png" />';
+        stamina3.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        dex2.innerHTML = '<img src="/images/bold-circle.png" />';
+        break;
+      case 7:
+        dex2.innerHTML = '<img src="/images/bold-circle.png" />';
+        dex3.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        str2.innerHTML = '<img src="/images/bold-circle.png" />';
+        break;
+      case 8:
+        dex2.innerHTML = '<img src="/images/bold-circle.png" />';
+        dex3.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        stamina2.innerHTML = '<img src="/images/bold-circle.png" />';
+        break;
+      case 9:
+        dex2.innerHTML = '<img src="/images/bold-circle.png" />';
+        stamina2.innerHTML = '<img src="/images/bold-circle.png" />';
+        str2.innerHTML = '<img src="/images/bold-circle.png" />';
+        break;
+    }
+  }
+
+  if (social7.checked == true || randomSocialOption == 0) {
+    var socialOptions = Math.floor(Math.random() * 12);
+    switch (socialOptions) {
+      case 0:
+        charisma2.innerHTML = '<img src="/images/bold-circle.png" />';
+        charisma3.innerHTML = '<img src="/images/bold-circle.png" />';
+        charisma4.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        manipulation2.innerHTML = '<img src="/images/bold-circle.png" />';
+        manipulation3.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        appear2.innerHTML = '<img src="/images/bold-circle.png" />';
+        appear3.innerHTML = '<img src="/images/bold-circle.png" />';
+        break;
+      case 1:
+        manipulation2.innerHTML = '<img src="/images/bold-circle.png" />';
+        manipulation3.innerHTML = '<img src="/images/bold-circle.png" />';
+        manipulation4.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        charisma2.innerHTML = '<img src="/images/bold-circle.png" />';
+        charisma3.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        appear2.innerHTML = '<img src="/images/bold-circle.png" />';
+        appear3.innerHTML = '<img src="/images/bold-circle.png" />';
+        break;
+      case 2:
+        appear2.innerHTML = '<img src="/images/bold-circle.png" />';
+        appear3.innerHTML = '<img src="/images/bold-circle.png" />';
+        appear4.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        manipulation2.innerHTML = '<img src="/images/bold-circle.png" />';
+        manipulation3.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        charisma2.innerHTML = '<img src="/images/bold-circle.png" />';
+        charisma3.innerHTML = '<img src="/images/bold-circle.png" />';
+        break;
+      case 3:
+        charisma2.innerHTML = '<img src="/images/bold-circle.png" />';
+        charisma3.innerHTML = '<img src="/images/bold-circle.png" />';
+        charisma4.innerHTML = '<img src="/images/bold-circle.png" />';
+        charisma5.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        manipulation2.innerHTML = '<img src="/images/bold-circle.png" />';
+        manipulation3.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        appear2.innerHTML = '<img src="/images/bold-circle.png" />';
+        break;
+      case 4:
+        charisma2.innerHTML = '<img src="/images/bold-circle.png" />';
+        charisma3.innerHTML = '<img src="/images/bold-circle.png" />';
+        charisma4.innerHTML = '<img src="/images/bold-circle.png" />';
+        charisma5.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        manipulation2.innerHTML = '<img src="/images/bold-circle.png" />';
+        manipulation3.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        appear2.innerHTML = '<img src="/images/bold-circle.png" />';
+        break;
+      case 5:
+        manipulation2.innerHTML = '<img src="/images/bold-circle.png" />';
+        manipulation3.innerHTML = '<img src="/images/bold-circle.png" />';
+        manipulation4.innerHTML = '<img src="/images/bold-circle.png" />';
+        manipulation5.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        charisma2.innerHTML = '<img src="/images/bold-circle.png" />';
+        charisma3.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        appear2.innerHTML = '<img src="/images/bold-circle.png" />';
+        break;
+      case 6:
+        manipulation2.innerHTML = '<img src="/images/bold-circle.png" />';
+        manipulation3.innerHTML = '<img src="/images/bold-circle.png" />';
+        manipulation4.innerHTML = '<img src="/images/bold-circle.png" />';
+        manipulation5.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        charisma2.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        appear2.innerHTML = '<img src="/images/bold-circle.png" />';
+        appear3.innerHTML = '<img src="/images/bold-circle.png" />';
+        break;
+      case 7:
+        appear2.innerHTML = '<img src="/images/bold-circle.png" />';
+        appear3.innerHTML = '<img src="/images/bold-circle.png" />';
+        appear4.innerHTML = '<img src="/images/bold-circle.png" />';
+        appear5.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        charisma2.innerHTML = '<img src="/images/bold-circle.png" />';
+        charisma3.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        manipulation2.innerHTML = '<img src="/images/bold-circle.png" />';
+        break;
+      case 8:
+        appear2.innerHTML = '<img src="/images/bold-circle.png" />';
+        appear3.innerHTML = '<img src="/images/bold-circle.png" />';
+        appear4.innerHTML = '<img src="/images/bold-circle.png" />';
+        appear5.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        charisma2.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        manipulation2.innerHTML = '<img src="/images/bold-circle.png" />';
+        manipulation3.innerHTML = '<img src="/images/bold-circle.png" />';
+        break;
+      case 9:
+        charisma2.innerHTML = '<img src="/images/bold-circle.png" />';
+        charisma3.innerHTML = '<img src="/images/bold-circle.png" />';
+        charisma4.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        appear2.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        manipulation2.innerHTML = '<img src="/images/bold-circle.png" />';
+        manipulation3.innerHTML = '<img src="/images/bold-circle.png" />';
+        manipulation4.innerHTML = '<img src="/images/bold-circle.png" />';
+        break;
+      case 10:
+        charisma2.innerHTML = '<img src="/images/bold-circle.png" />';
+        charisma3.innerHTML = '<img src="/images/bold-circle.png" />';
+        charisma4.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        appear2.innerHTML = '<img src="/images/bold-circle.png" />';
+        appear3.innerHTML = '<img src="/images/bold-circle.png" />';
+        appear4.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        manipulation2.innerHTML = '<img src="/images/bold-circle.png" />';
+        break;
+      case 11:
+        manipulation2.innerHTML = '<img src="/images/bold-circle.png" />';
+        manipulation3.innerHTML = '<img src="/images/bold-circle.png" />';
+        manipulation4.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        appear2.innerHTML = '<img src="/images/bold-circle.png" />';
+        appear3.innerHTML = '<img src="/images/bold-circle.png" />';
+        appear4.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        charisma2.innerHTML = '<img src="/images/bold-circle.png" />';
+        break;
+    }
+  } else if (social5.checked == true || randomSocialOption == 1) {
+    var socialOptions = Math.floor(Math.random() * 12);
+    switch (socialOptions) {
+      case 0:
+        charisma2.innerHTML = '<img src="/images/bold-circle.png" />';
+        charisma3.innerHTML = '<img src="/images/bold-circle.png" />';
+        charisma4.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        manipulation2.innerHTML = '<img src="/images/bold-circle.png" />';
+        manipulation3.innerHTML = '<img src="/images/bold-circle.png" />';
+        break;
+      case 1:
+        charisma2.innerHTML = '<img src="/images/bold-circle.png" />';
+        charisma3.innerHTML = '<img src="/images/bold-circle.png" />';
+        charisma4.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        appear2.innerHTML = '<img src="/images/bold-circle.png" />';
+        appear3.innerHTML = '<img src="/images/bold-circle.png" />';
+        break;
+      case 2:
+        charisma2.innerHTML = '<img src="/images/bold-circle.png" />';
+        charisma3.innerHTML = '<img src="/images/bold-circle.png" />';
+        charisma4.innerHTML = '<img src="/images/bold-circle.png" />';
+        charisma5.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        manipulation2.innerHTML = '<img src="/images/bold-circle.png" />';
+        break;
+      case 3:
+        charisma2.innerHTML = '<img src="/images/bold-circle.png" />';
+        charisma3.innerHTML = '<img src="/images/bold-circle.png" />';
+        charisma4.innerHTML = '<img src="/images/bold-circle.png" />';
+        charisma5.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        appear2.innerHTML = '<img src="/images/bold-circle.png" />';
+        break;
+      case 4:
+        manipulation2.innerHTML = '<img src="/images/bold-circle.png" />';
+        manipulation3.innerHTML = '<img src="/images/bold-circle.png" />';
+        manipulation4.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        charisma2.innerHTML = '<img src="/images/bold-circle.png" />';
+        charisma3.innerHTML = '<img src="/images/bold-circle.png" />';
+        break;
+      case 5:
+        manipulation2.innerHTML = '<img src="/images/bold-circle.png" />';
+        manipulation3.innerHTML = '<img src="/images/bold-circle.png" />';
+        manipulation4.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        appear2.innerHTML = '<img src="/images/bold-circle.png" />';
+        appear3.innerHTML = '<img src="/images/bold-circle.png" />';
+        break;
+      case 6:
+        manipulation2.innerHTML = '<img src="/images/bold-circle.png" />';
+        manipulation3.innerHTML = '<img src="/images/bold-circle.png" />';
+        manipulation4.innerHTML = '<img src="/images/bold-circle.png" />';
+        manipulation5.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        charisma2.innerHTML = '<img src="/images/bold-circle.png" />';
+        break;
+      case 7:
+        manipulation2.innerHTML = '<img src="/images/bold-circle.png" />';
+        manipulation3.innerHTML = '<img src="/images/bold-circle.png" />';
+        manipulation4.innerHTML = '<img src="/images/bold-circle.png" />';
+        manipulation5.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        appear2.innerHTML = '<img src="/images/bold-circle.png" />';
+        break;
+      case 8:
+        appear2.innerHTML = '<img src="/images/bold-circle.png" />';
+        appear3.innerHTML = '<img src="/images/bold-circle.png" />';
+        appear4.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        manipulation2.innerHTML = '<img src="/images/bold-circle.png" />';
+        manipulation3.innerHTML = '<img src="/images/bold-circle.png" />';
+        break;
+      case 9:
+        appear2.innerHTML = '<img src="/images/bold-circle.png" />';
+        appear3.innerHTML = '<img src="/images/bold-circle.png" />';
+        appear4.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        charisma2.innerHTML = '<img src="/images/bold-circle.png" />';
+        charisma3.innerHTML = '<img src="/images/bold-circle.png" />';
+        break;
+      case 10:
+        appear2.innerHTML = '<img src="/images/bold-circle.png" />';
+        appear3.innerHTML = '<img src="/images/bold-circle.png" />';
+        appear4.innerHTML = '<img src="/images/bold-circle.png" />';
+        appear5.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        manipulation2.innerHTML = '<img src="/images/bold-circle.png" />';
+        break;
+      case 11:
+        appear2.innerHTML = '<img src="/images/bold-circle.png" />';
+        appear3.innerHTML = '<img src="/images/bold-circle.png" />';
+        appear4.innerHTML = '<img src="/images/bold-circle.png" />';
+        appear5.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        charisma2.innerHTML = '<img src="/images/bold-circle.png" />';
+        break;
+    }
+  } else if (social3.checked == true || randomSocialOption == 2) {
+    var socialOptions = Math.floor(Math.random() * 10);
+    switch (socialOptions) {
+      case 0:
+        charisma2.innerHTML = '<img src="/images/bold-circle.png" />';
+        charisma3.innerHTML = '<img src="/images/bold-circle.png" />';
+        charisma4.innerHTML = '<img src="/images/bold-circle.png" />';
+        break;
+      case 1:
+        appear2.innerHTML = '<img src="/images/bold-circle.png" />';
+        appear3.innerHTML = '<img src="/images/bold-circle.png" />';
+        appear4.innerHTML = '<img src="/images/bold-circle.png" />';
+        break;
+      case 2:
+        manipulation2.innerHTML = '<img src="/images/bold-circle.png" />';
+        manipulation3.innerHTML = '<img src="/images/bold-circle.png" />';
+        manipulation4.innerHTML = '<img src="/images/bold-circle.png" />';
+        break;
+      case 3:
+        charisma2.innerHTML = '<img src="/images/bold-circle.png" />';
+        charisma3.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        manipulation2.innerHTML = '<img src="/images/bold-circle.png" />';
+        break;
+      case 4:
+        charisma2.innerHTML = '<img src="/images/bold-circle.png" />';
+        charisma3.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        appear2.innerHTML = '<img src="/images/bold-circle.png" />';
+        break;
+      case 5:
+        appear2.innerHTML = '<img src="/images/bold-circle.png" />';
+        appear3.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        charisma2.innerHTML = '<img src="/images/bold-circle.png" />';
+        break;
+      case 6:
+        appear2.innerHTML = '<img src="/images/bold-circle.png" />';
+        appear3.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        manipulation2.innerHTML = '<img src="/images/bold-circle.png" />';
+        break;
+      case 7:
+        manipulation2.innerHTML = '<img src="/images/bold-circle.png" />';
+        manipulation3.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        charisma2.innerHTML = '<img src="/images/bold-circle.png" />';
+        break;
+      case 8:
+        manipulation2.innerHTML = '<img src="/images/bold-circle.png" />';
+        manipulation3.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        appear2.innerHTML = '<img src="/images/bold-circle.png" />';
+        break;
+      case 9:
+        manipulation2.innerHTML = '<img src="/images/bold-circle.png" />';
+        appear2.innerHTML = '<img src="/images/bold-circle.png" />';
+        charisma2.innerHTML = '<img src="/images/bold-circle.png" />';
+        break;
+    }
+  }
+
+  if (mental7.checked == true || randomMentalOption == 0) {
+    var mentalOptions = Math.floor(Math.random() * 12);
+    switch (mentalOptions) {
+      case 0:
+        percep2.innerHTML = '<img src="/images/bold-circle.png" />';
+        percep3.innerHTML = '<img src="/images/bold-circle.png" />';
+        percep4.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        int2.innerHTML = '<img src="/images/bold-circle.png" />';
+        int3.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        wits2.innerHTML = '<img src="/images/bold-circle.png" />';
+        wits3.innerHTML = '<img src="/images/bold-circle.png" />';
+        break;
+      case 1:
+        int2.innerHTML = '<img src="/images/bold-circle.png" />';
+        int3.innerHTML = '<img src="/images/bold-circle.png" />';
+        int4.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        percep2.innerHTML = '<img src="/images/bold-circle.png" />';
+        percep3.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        wits2.innerHTML = '<img src="/images/bold-circle.png" />';
+        wits3.innerHTML = '<img src="/images/bold-circle.png" />';
+        break;
+      case 2:
+        wits2.innerHTML = '<img src="/images/bold-circle.png" />';
+        wits3.innerHTML = '<img src="/images/bold-circle.png" />';
+        wits4.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        int2.innerHTML = '<img src="/images/bold-circle.png" />';
+        int3.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        percep2.innerHTML = '<img src="/images/bold-circle.png" />';
+        percep3.innerHTML = '<img src="/images/bold-circle.png" />';
+        break;
+      case 3:
+        percep2.innerHTML = '<img src="/images/bold-circle.png" />';
+        percep3.innerHTML = '<img src="/images/bold-circle.png" />';
+        percep4.innerHTML = '<img src="/images/bold-circle.png" />';
+        percep5.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        int2.innerHTML = '<img src="/images/bold-circle.png" />';
+        int3.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        wits2.innerHTML = '<img src="/images/bold-circle.png" />';
+        break;
+      case 4:
+        percep2.innerHTML = '<img src="/images/bold-circle.png" />';
+        percep3.innerHTML = '<img src="/images/bold-circle.png" />';
+        percep4.innerHTML = '<img src="/images/bold-circle.png" />';
+        percep5.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        int2.innerHTML = '<img src="/images/bold-circle.png" />';
+        int3.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        wits2.innerHTML = '<img src="/images/bold-circle.png" />';
+        break;
+      case 5:
+        int2.innerHTML = '<img src="/images/bold-circle.png" />';
+        int3.innerHTML = '<img src="/images/bold-circle.png" />';
+        int4.innerHTML = '<img src="/images/bold-circle.png" />';
+        int5.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        percep2.innerHTML = '<img src="/images/bold-circle.png" />';
+        percep3.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        wits2.innerHTML = '<img src="/images/bold-circle.png" />';
+        break;
+      case 6:
+        int2.innerHTML = '<img src="/images/bold-circle.png" />';
+        int3.innerHTML = '<img src="/images/bold-circle.png" />';
+        int4.innerHTML = '<img src="/images/bold-circle.png" />';
+        int5.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        percep2.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        wits2.innerHTML = '<img src="/images/bold-circle.png" />';
+        wits3.innerHTML = '<img src="/images/bold-circle.png" />';
+        break;
+      case 7:
+        wits2.innerHTML = '<img src="/images/bold-circle.png" />';
+        wits3.innerHTML = '<img src="/images/bold-circle.png" />';
+        wits4.innerHTML = '<img src="/images/bold-circle.png" />';
+        wits5.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        percep2.innerHTML = '<img src="/images/bold-circle.png" />';
+        percep3.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        int2.innerHTML = '<img src="/images/bold-circle.png" />';
+        break;
+      case 8:
+        wits2.innerHTML = '<img src="/images/bold-circle.png" />';
+        wits3.innerHTML = '<img src="/images/bold-circle.png" />';
+        wits4.innerHTML = '<img src="/images/bold-circle.png" />';
+        wits5.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        percep2.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        int2.innerHTML = '<img src="/images/bold-circle.png" />';
+        int3.innerHTML = '<img src="/images/bold-circle.png" />';
+        break;
+      case 9:
+        percep2.innerHTML = '<img src="/images/bold-circle.png" />';
+        percep3.innerHTML = '<img src="/images/bold-circle.png" />';
+        percep4.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        wits2.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        int2.innerHTML = '<img src="/images/bold-circle.png" />';
+        int3.innerHTML = '<img src="/images/bold-circle.png" />';
+        int4.innerHTML = '<img src="/images/bold-circle.png" />';
+        break;
+      case 10:
+        percep2.innerHTML = '<img src="/images/bold-circle.png" />';
+        percep3.innerHTML = '<img src="/images/bold-circle.png" />';
+        percep4.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        wits2.innerHTML = '<img src="/images/bold-circle.png" />';
+        wits3.innerHTML = '<img src="/images/bold-circle.png" />';
+        wits4.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        int2.innerHTML = '<img src="/images/bold-circle.png" />';
+        break;
+      case 11:
+        int2.innerHTML = '<img src="/images/bold-circle.png" />';
+        int3.innerHTML = '<img src="/images/bold-circle.png" />';
+        int4.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        wits2.innerHTML = '<img src="/images/bold-circle.png" />';
+        wits3.innerHTML = '<img src="/images/bold-circle.png" />';
+        wits4.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        percep2.innerHTML = '<img src="/images/bold-circle.png" />';
+        break;
+    }
+  } else if (mental5.checked == true || randomMentalOption == 1) {
+    var mentalOptions = Math.floor(Math.random() * 12);
+    switch (mentalOptions) {
+      case 0:
+        percep2.innerHTML = '<img src="/images/bold-circle.png" />';
+        percep3.innerHTML = '<img src="/images/bold-circle.png" />';
+        percep4.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        int2.innerHTML = '<img src="/images/bold-circle.png" />';
+        int3.innerHTML = '<img src="/images/bold-circle.png" />';
+        break;
+      case 1:
+        percep2.innerHTML = '<img src="/images/bold-circle.png" />';
+        percep3.innerHTML = '<img src="/images/bold-circle.png" />';
+        percep4.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        wits2.innerHTML = '<img src="/images/bold-circle.png" />';
+        wits3.innerHTML = '<img src="/images/bold-circle.png" />';
+        break;
+      case 2:
+        percep2.innerHTML = '<img src="/images/bold-circle.png" />';
+        percep3.innerHTML = '<img src="/images/bold-circle.png" />';
+        percep4.innerHTML = '<img src="/images/bold-circle.png" />';
+        percep5.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        int2.innerHTML = '<img src="/images/bold-circle.png" />';
+        break;
+      case 3:
+        percep2.innerHTML = '<img src="/images/bold-circle.png" />';
+        percep3.innerHTML = '<img src="/images/bold-circle.png" />';
+        percep4.innerHTML = '<img src="/images/bold-circle.png" />';
+        percep5.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        wits2.innerHTML = '<img src="/images/bold-circle.png" />';
+        break;
+      case 4:
+        int2.innerHTML = '<img src="/images/bold-circle.png" />';
+        int3.innerHTML = '<img src="/images/bold-circle.png" />';
+        int4.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        percep2.innerHTML = '<img src="/images/bold-circle.png" />';
+        percep3.innerHTML = '<img src="/images/bold-circle.png" />';
+        break;
+      case 5:
+        int2.innerHTML = '<img src="/images/bold-circle.png" />';
+        int3.innerHTML = '<img src="/images/bold-circle.png" />';
+        int4.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        wits2.innerHTML = '<img src="/images/bold-circle.png" />';
+        wits3.innerHTML = '<img src="/images/bold-circle.png" />';
+        break;
+      case 6:
+        int2.innerHTML = '<img src="/images/bold-circle.png" />';
+        int3.innerHTML = '<img src="/images/bold-circle.png" />';
+        int4.innerHTML = '<img src="/images/bold-circle.png" />';
+        int5.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        percep2.innerHTML = '<img src="/images/bold-circle.png" />';
+        break;
+      case 7:
+        int2.innerHTML = '<img src="/images/bold-circle.png" />';
+        int3.innerHTML = '<img src="/images/bold-circle.png" />';
+        int4.innerHTML = '<img src="/images/bold-circle.png" />';
+        int5.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        wits2.innerHTML = '<img src="/images/bold-circle.png" />';
+        break;
+      case 8:
+        wits2.innerHTML = '<img src="/images/bold-circle.png" />';
+        wits3.innerHTML = '<img src="/images/bold-circle.png" />';
+        wits4.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        int2.innerHTML = '<img src="/images/bold-circle.png" />';
+        int3.innerHTML = '<img src="/images/bold-circle.png" />';
+        break;
+      case 9:
+        wits2.innerHTML = '<img src="/images/bold-circle.png" />';
+        wits3.innerHTML = '<img src="/images/bold-circle.png" />';
+        wits4.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        percep2.innerHTML = '<img src="/images/bold-circle.png" />';
+        percep3.innerHTML = '<img src="/images/bold-circle.png" />';
+        break;
+      case 10:
+        wits2.innerHTML = '<img src="/images/bold-circle.png" />';
+        wits3.innerHTML = '<img src="/images/bold-circle.png" />';
+        wits4.innerHTML = '<img src="/images/bold-circle.png" />';
+        wits5.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        int2.innerHTML = '<img src="/images/bold-circle.png" />';
+        break;
+      case 11:
+        wits2.innerHTML = '<img src="/images/bold-circle.png" />';
+        wits3.innerHTML = '<img src="/images/bold-circle.png" />';
+        wits4.innerHTML = '<img src="/images/bold-circle.png" />';
+        wits5.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        percep2.innerHTML = '<img src="/images/bold-circle.png" />';
+        break;
+    }
+  } else if (mental3.checked == true || randomMentalOption == 2) {
+    var mentalOptions = Math.floor(Math.random() * 10);
+    switch (mentalOptions) {
+      case 0:
+        percep2.innerHTML = '<img src="/images/bold-circle.png" />';
+        percep3.innerHTML = '<img src="/images/bold-circle.png" />';
+        percep4.innerHTML = '<img src="/images/bold-circle.png" />';
+        break;
+      case 1:
+        wits2.innerHTML = '<img src="/images/bold-circle.png" />';
+        wits3.innerHTML = '<img src="/images/bold-circle.png" />';
+        wits4.innerHTML = '<img src="/images/bold-circle.png" />';
+        break;
+      case 2:
+        int2.innerHTML = '<img src="/images/bold-circle.png" />';
+        int3.innerHTML = '<img src="/images/bold-circle.png" />';
+        int4.innerHTML = '<img src="/images/bold-circle.png" />';
+        break;
+      case 3:
+        percep2.innerHTML = '<img src="/images/bold-circle.png" />';
+        percep3.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        int2.innerHTML = '<img src="/images/bold-circle.png" />';
+        break;
+      case 4:
+        percep2.innerHTML = '<img src="/images/bold-circle.png" />';
+        percep3.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        wits2.innerHTML = '<img src="/images/bold-circle.png" />';
+        break;
+      case 5:
+        wits2.innerHTML = '<img src="/images/bold-circle.png" />';
+        wits3.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        percep2.innerHTML = '<img src="/images/bold-circle.png" />';
+        break;
+      case 6:
+        wits2.innerHTML = '<img src="/images/bold-circle.png" />';
+        wits3.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        int2.innerHTML = '<img src="/images/bold-circle.png" />';
+        break;
+      case 7:
+        int2.innerHTML = '<img src="/images/bold-circle.png" />';
+        int3.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        percep2.innerHTML = '<img src="/images/bold-circle.png" />';
+        break;
+      case 8:
+        int2.innerHTML = '<img src="/images/bold-circle.png" />';
+        int3.innerHTML = '<img src="/images/bold-circle.png" />';
+
+        wits2.innerHTML = '<img src="/images/bold-circle.png" />';
+        break;
+      case 9:
+        int2.innerHTML = '<img src="/images/bold-circle.png" />';
+        wits2.innerHTML = '<img src="/images/bold-circle.png" />';
+        percep2.innerHTML = '<img src="/images/bold-circle.png" />';
+        break;
+    }
+  }
+}
+
+//ABILITIES OUTPUT
+
+// RADIOS FUNCTIONS
 function blockPhysicalFiveThree() {
   randomAttributes.checked = false;
   physical5.disabled = true;
@@ -2271,7 +3146,6 @@ function blockPhysicalFiveSeven() {
     social3.checked = false;
   }
 }
-
 function blockTalentsFiveSeven() {
   randomAbilities.checked = false;
   talents5.disabled = true;
@@ -2426,7 +3300,36 @@ function enableAbilitiesRadios() {
   randomAbilities.checked = true;
   randomAbilities.disabled = false;
 }
+function enableAttributesRadios() {
+  physical3.checked = false;
+  physical5.checked = false;
+  physical7.checked = false;
 
+  physical3.disabled = false;
+  physical5.disabled = false;
+  physical7.disabled = false;
+
+  social3.checked = false;
+  social5.checked = false;
+  social7.checked = false;
+
+  social3.disabled = false;
+  social5.disabled = false;
+  social7.disabled = false;
+
+  mental3.checked = false;
+  mental5.checked = false;
+  mental7.checked = false;
+
+  mental3.disabled = false;
+  mental5.disabled = false;
+  mental7.disabled = false;
+
+  randomAttributes.checked = true;
+  randomAttributes.disabled = false;
+}
+
+//BUTTONS FUNCTIONS
 function generateSheet(event) {
   event.preventDefault();
 
@@ -2442,8 +3345,39 @@ function generateSheet(event) {
   outputTribes();
   outputGifts();
 
+  outputAttributesPoints();
+
   enableAttributesRadios();
   enableAbilitiesRadios();
 }
+
+function cleanWithReset() {
+  randomAttributes.checked = true;
+
+  physical3.checked = false;
+  physical5.checked = false;
+  physical7.checked = false;
+
+  physical3.disabled = false;
+  physical5.disabled = false;
+  physical7.disabled = false;
+
+  social3.checked = false;
+  social5.checked = false;
+  social7.checked = false;
+
+  social3.disabled = false;
+  social5.disabled = false;
+  social7.disabled = false;
+
+  mental3.checked = false;
+  mental5.checked = false;
+  mental7.checked = false;
+
+  mental3.disabled = false;
+  mental5.disabled = false;
+  mental7.disabled = false;
+}
+
 
 
