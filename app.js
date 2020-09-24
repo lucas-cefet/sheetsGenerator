@@ -5,7 +5,6 @@ const breedOptions = document.querySelector(".breed-options");
 const auspiceOptions = document.querySelector(".auspice-options");
 const tribeOptions = document.querySelector(".tribe-options");
 const auspiceSelection = document.querySelector(".char-auspice");
-const points = document.querySelector(".points");
 
 const sheetFirstName = document.getElementById("sheet-first-name");
 const sheetLastName = document.getElementById("sheet-last-name");
@@ -662,6 +661,7 @@ const alertness2 = document.getElementById("alertness2");
 const alertness3 = document.getElementById("alertness3");
 const alertness4 = document.getElementById("alertness4");
 const alertness5 = document.getElementById("alertness5");
+
 const athletics1 = document.getElementById("athletics1");
 const athletics2 = document.getElementById("athletics2");
 const athletics3 = document.getElementById("athletics3");
@@ -710,11 +710,11 @@ const streetwise3 = document.getElementById("streetwise3");
 const streetwise4 = document.getElementById("streetwise4");
 const streetwise5 = document.getElementById("streetwise5");
 
-const subterfuge1 = document.getElementById("subterfurge1");
-const subterfuge2 = document.getElementById("subterfurge2");
-const subterfuge3 = document.getElementById("subterfurge3");
-const subterfuge4 = document.getElementById("subterfurge4");
-const subterfuge5 = document.getElementById("subterfurge5");
+const subterfuge1 = document.getElementById("subterfuge1");
+const subterfuge2 = document.getElementById("subterfuge2");
+const subterfuge3 = document.getElementById("subterfuge3");
+const subterfuge4 = document.getElementById("subterfuge4");
+const subterfuge5 = document.getElementById("subterfuge5");
 
 // SKILLS
 
@@ -1152,7 +1152,185 @@ function cleanAttributes() {
   wits5.innerHTML = '<img src="/images/light-circle.png" />';
 }
 function cleanAbilities() {
-  points.innerHTML = '<img src="/images/light-circle.png" />';
+  alertness1.innerHTML = '<img src="/images/light-circle.png" />';
+  alertness2.innerHTML = '<img src="/images/light-circle.png" />';
+  alertness3.innerHTML = '<img src="/images/light-circle.png" />';
+  alertness4.innerHTML = '<img src="/images/light-circle.png" />';
+  alertness5.innerHTML = '<img src="/images/light-circle.png" />';
+
+  athletics1.innerHTML = '<img src="/images/light-circle.png" />';
+  athletics2.innerHTML = '<img src="/images/light-circle.png" />';
+  athletics3.innerHTML = '<img src="/images/light-circle.png" />';
+  athletics4.innerHTML = '<img src="/images/light-circle.png" />';
+  athletics5.innerHTML = '<img src="/images/light-circle.png" />';
+
+  brawl1.innerHTML = '<img src="/images/light-circle.png" />';
+  brawl2.innerHTML = '<img src="/images/light-circle.png" />';
+  brawl3.innerHTML = '<img src="/images/light-circle.png" />';
+  brawl4.innerHTML = '<img src="/images/light-circle.png" />';
+  brawl5.innerHTML = '<img src="/images/light-circle.png" />';
+
+  dodge1.innerHTML = '<img src="/images/light-circle.png" />';
+  dodge2.innerHTML = '<img src="/images/light-circle.png" />';
+  dodge3.innerHTML = '<img src="/images/light-circle.png" />';
+  dodge4.innerHTML = '<img src="/images/light-circle.png" />';
+  dodge5.innerHTML = '<img src="/images/light-circle.png" />';
+
+  empathy1.innerHTML = '<img src="/images/light-circle.png" />';
+  empathy2.innerHTML = '<img src="/images/light-circle.png" />';
+  empathy3.innerHTML = '<img src="/images/light-circle.png" />';
+  empathy4.innerHTML = '<img src="/images/light-circle.png" />';
+  empathy5.innerHTML = '<img src="/images/light-circle.png" />';
+
+  expression1.innerHTML = '<img src="/images/light-circle.png" />';
+  expression2.innerHTML = '<img src="/images/light-circle.png" />';
+  expression3.innerHTML = '<img src="/images/light-circle.png" />';
+  expression4.innerHTML = '<img src="/images/light-circle.png" />';
+  expression5.innerHTML = '<img src="/images/light-circle.png" />';
+
+  intimidation1.innerHTML = '<img src="/images/light-circle.png" />';
+  intimidation2.innerHTML = '<img src="/images/light-circle.png" />';
+  intimidation3.innerHTML = '<img src="/images/light-circle.png" />';
+  intimidation4.innerHTML = '<img src="/images/light-circle.png" />';
+  intimidation5.innerHTML = '<img src="/images/light-circle.png" />';
+
+  primalUrge1.innerHTML = '<img src="/images/light-circle.png" />';
+  primalUrge2.innerHTML = '<img src="/images/light-circle.png" />';
+  primalUrge3.innerHTML = '<img src="/images/light-circle.png" />';
+  primalUrge4.innerHTML = '<img src="/images/light-circle.png" />';
+  primalUrge5.innerHTML = '<img src="/images/light-circle.png" />';
+
+  streetwise1.innerHTML = '<img src="/images/light-circle.png" />';
+  streetwise2.innerHTML = '<img src="/images/light-circle.png" />';
+  streetwise3.innerHTML = '<img src="/images/light-circle.png" />';
+  streetwise4.innerHTML = '<img src="/images/light-circle.png" />';
+  streetwise5.innerHTML = '<img src="/images/light-circle.png" />';
+
+  subterfuge1.innerHTML = '<img src="/images/light-circle.png" />';
+  subterfuge2.innerHTML = '<img src="/images/light-circle.png" />';
+  subterfuge3.innerHTML = '<img src="/images/light-circle.png" />';
+  subterfuge4.innerHTML = '<img src="/images/light-circle.png" />';
+  subterfuge5.innerHTML = '<img src="/images/light-circle.png" />';
+
+  animalKen1.innerHTML = '<img src="/images/light-circle.png" />';
+  animalKen2.innerHTML = '<img src="/images/light-circle.png" />';
+  animalKen3.innerHTML = '<img src="/images/light-circle.png" />';
+  animalKen4.innerHTML = '<img src="/images/light-circle.png" />';
+  animalKen5.innerHTML = '<img src="/images/light-circle.png" />';
+
+  drive1.innerHTML = '<img src="/images/light-circle.png" />';
+  drive2.innerHTML = '<img src="/images/light-circle.png" />';
+  drive3.innerHTML = '<img src="/images/light-circle.png" />';
+  drive4.innerHTML = '<img src="/images/light-circle.png" />';
+  drive5.innerHTML = '<img src="/images/light-circle.png" />';
+
+  etiquette1.innerHTML = '<img src="/images/light-circle.png" />';
+  etiquette2.innerHTML = '<img src="/images/light-circle.png" />';
+  etiquette3.innerHTML = '<img src="/images/light-circle.png" />';
+  etiquette4.innerHTML = '<img src="/images/light-circle.png" />';
+  etiquette5.innerHTML = '<img src="/images/light-circle.png" />';
+
+  fireArms1.innerHTML = '<img src="/images/light-circle.png" />';
+  fireArms2.innerHTML = '<img src="/images/light-circle.png" />';
+  fireArms3.innerHTML = '<img src="/images/light-circle.png" />';
+  fireArms4.innerHTML = '<img src="/images/light-circle.png" />';
+  fireArms5.innerHTML = '<img src="/images/light-circle.png" />';
+
+  melee1.innerHTML = '<img src="/images/light-circle.png" />';
+  melee2.innerHTML = '<img src="/images/light-circle.png" />';
+  melee3.innerHTML = '<img src="/images/light-circle.png" />';
+  melee4.innerHTML = '<img src="/images/light-circle.png" />';
+  melee5.innerHTML = '<img src="/images/light-circle.png" />';
+
+  leadership1.innerHTML = '<img src="/images/light-circle.png" />';
+  leadership2.innerHTML = '<img src="/images/light-circle.png" />';
+  leadership3.innerHTML = '<img src="/images/light-circle.png" />';
+  leadership4.innerHTML = '<img src="/images/light-circle.png" />';
+  leadership5.innerHTML = '<img src="/images/light-circle.png" />';
+
+  performance1.innerHTML = '<img src="/images/light-circle.png" />';
+  performance2.innerHTML = '<img src="/images/light-circle.png" />';
+  performance3.innerHTML = '<img src="/images/light-circle.png" />';
+  performance4.innerHTML = '<img src="/images/light-circle.png" />';
+  performance5.innerHTML = '<img src="/images/light-circle.png" />';
+
+  repair1.innerHTML = '<img src="/images/light-circle.png" />';
+  repair2.innerHTML = '<img src="/images/light-circle.png" />';
+  repair3.innerHTML = '<img src="/images/light-circle.png" />';
+  repair4.innerHTML = '<img src="/images/light-circle.png" />';
+  repair5.innerHTML = '<img src="/images/light-circle.png" />';
+
+  stealth1.innerHTML = '<img src="/images/light-circle.png" />';
+  stealth2.innerHTML = '<img src="/images/light-circle.png" />';
+  stealth3.innerHTML = '<img src="/images/light-circle.png" />';
+  stealth4.innerHTML = '<img src="/images/light-circle.png" />';
+  stealth5.innerHTML = '<img src="/images/light-circle.png" />';
+
+  survival1.innerHTML = '<img src="/images/light-circle.png" />';
+  survival2.innerHTML = '<img src="/images/light-circle.png" />';
+  survival3.innerHTML = '<img src="/images/light-circle.png" />';
+  survival4.innerHTML = '<img src="/images/light-circle.png" />';
+  survival5.innerHTML = '<img src="/images/light-circle.png" />';
+
+  computer1.innerHTML = '<img src="/images/light-circle.png" />';
+  computer2.innerHTML = '<img src="/images/light-circle.png" />';
+  computer3.innerHTML = '<img src="/images/light-circle.png" />';
+  computer4.innerHTML = '<img src="/images/light-circle.png" />';
+  computer5.innerHTML = '<img src="/images/light-circle.png" />';
+
+  enigmas1.innerHTML = '<img src="/images/light-circle.png" />';
+  enigmas2.innerHTML = '<img src="/images/light-circle.png" />';
+  enigmas3.innerHTML = '<img src="/images/light-circle.png" />';
+  enigmas4.innerHTML = '<img src="/images/light-circle.png" />';
+  enigmas5.innerHTML = '<img src="/images/light-circle.png" />';
+
+  investigation1.innerHTML = '<img src="/images/light-circle.png" />';
+  investigation2.innerHTML = '<img src="/images/light-circle.png" />';
+  investigation3.innerHTML = '<img src="/images/light-circle.png" />';
+  investigation4.innerHTML = '<img src="/images/light-circle.png" />';
+  investigation5.innerHTML = '<img src="/images/light-circle.png" />';
+
+  law1.innerHTML = '<img src="/images/light-circle.png" />';
+  law2.innerHTML = '<img src="/images/light-circle.png" />';
+  law3.innerHTML = '<img src="/images/light-circle.png" />';
+  law4.innerHTML = '<img src="/images/light-circle.png" />';
+  law5.innerHTML = '<img src="/images/light-circle.png" />';
+
+  linguistics1.innerHTML = '<img src="/images/light-circle.png" />';
+  linguistics2.innerHTML = '<img src="/images/light-circle.png" />';
+  linguistics3.innerHTML = '<img src="/images/light-circle.png" />';
+  linguistics4.innerHTML = '<img src="/images/light-circle.png" />';
+  linguistics5.innerHTML = '<img src="/images/light-circle.png" />';
+
+  medicine1.innerHTML = '<img src="/images/light-circle.png" />';
+  medicine2.innerHTML = '<img src="/images/light-circle.png" />';
+  medicine3.innerHTML = '<img src="/images/light-circle.png" />';
+  medicine4.innerHTML = '<img src="/images/light-circle.png" />';
+  medicine5.innerHTML = '<img src="/images/light-circle.png" />';
+
+  occult1.innerHTML = '<img src="/images/light-circle.png" />';
+  occult2.innerHTML = '<img src="/images/light-circle.png" />';
+  occult3.innerHTML = '<img src="/images/light-circle.png" />';
+  occult4.innerHTML = '<img src="/images/light-circle.png" />';
+  occult5.innerHTML = '<img src="/images/light-circle.png" />';
+
+  politics1.innerHTML = '<img src="/images/light-circle.png" />';
+  politics2.innerHTML = '<img src="/images/light-circle.png" />';
+  politics3.innerHTML = '<img src="/images/light-circle.png" />';
+  politics4.innerHTML = '<img src="/images/light-circle.png" />';
+  politics5.innerHTML = '<img src="/images/light-circle.png" />';
+
+  rituals1.innerHTML = '<img src="/images/light-circle.png" />';
+  rituals2.innerHTML = '<img src="/images/light-circle.png" />';
+  rituals3.innerHTML = '<img src="/images/light-circle.png" />';
+  rituals4.innerHTML = '<img src="/images/light-circle.png" />';
+  rituals5.innerHTML = '<img src="/images/light-circle.png" />';
+
+  science1.innerHTML = '<img src="/images/light-circle.png" />';
+  science2.innerHTML = '<img src="/images/light-circle.png" />';
+  science3.innerHTML = '<img src="/images/light-circle.png" />';
+  science4.innerHTML = '<img src="/images/light-circle.png" />';
+  science5.innerHTML = '<img src="/images/light-circle.png" />';
 }
 function cleanAdvantages() {
   gifts1.innerText = "";
@@ -1229,6 +1407,8 @@ function cleanRenown() {
   willpower8.innerHTML = '<img src="/images/light-circle.png" />';
   willpower9.innerHTML = '<img src="/images/light-circle.png" />';
   willpower10.innerHTML = '<img src="/images/light-circle.png" />';
+
+  metisDeformity.innerText = "";
 }
 
 // SHOW HIDDEN DROPBOX
@@ -1726,6 +1906,8 @@ function outputBreeds() {
       var gifLength = breedGifts.metis.length - 1;
       var randomGift = Math.floor(Math.random() * (gifLength - 1 + 1)) + 1;
       gifts1.innerText = breedGifts.metis[randomGift];
+      var chosenDeformity = Math.floor(Math.random() * metisDeformities.length);
+      metisDeformity.innerText = metisDeformities[chosenDeformity];
     }
   } else {
     chosenBreed--;
@@ -1742,6 +1924,8 @@ function outputBreeds() {
       gnosis1.innerHTML = '<img src="/images/bold-circle.png" />';
       gnosis2.innerHTML = '<img src="/images/bold-circle.png" />';
       gnosis3.innerHTML = '<img src="/images/bold-circle.png" />';
+      var chosenDeformity = Math.floor(Math.random() * metisDeformities.length);
+      metisDeformity.innerText = metisDeformities[chosenDeformity];
     }
   }
 }
@@ -3018,6 +3202,2395 @@ function outputAttributesPoints() {
 }
 
 //ABILITIES OUTPUT
+function outputAbilitiesPoints() {
+  const talentsVariables1 = [
+    alertness1,
+    athletics1,
+    brawl1,
+    dodge1,
+    empathy1,
+    expression1,
+    intimidation1,
+    primalUrge1,
+    streetwise1,
+    subterfuge1,
+  ];
+  const talentsVariables2 = [
+    alertness2,
+    athletics2,
+    brawl2,
+    dodge2,
+    empathy2,
+    expression2,
+    intimidation2,
+    primalUrge2,
+    streetwise2,
+    subterfuge2,
+  ];
+  const talentsVariables3 = [
+    alertness3,
+    athletics3,
+    brawl3,
+    dodge3,
+    empathy3,
+    expression3,
+    intimidation3,
+    primalUrge3,
+    streetwise3,
+    subterfuge3,
+  ];
+  const talentsVariables4 = [
+    alertness4,
+    athletics4,
+    brawl4,
+    dodge4,
+    empathy4,
+    expression4,
+    intimidation4,
+    primalUrge4,
+    streetwise4,
+    subterfuge4,
+  ];
+  const talentsVariables5 = [
+    alertness5,
+    athletics5,
+    brawl5,
+    dodge5,
+    empathy5,
+    expression5,
+    intimidation5,
+    primalUrge5,
+    streetwise5,
+    subterfuge5,
+  ];
+  const skillsVariables1 = [
+    animalKen1,
+    drive1,
+    etiquette1,
+    fireArms1,
+    melee1,
+    leadership1,
+    performance1,
+    repair1,
+    stealth1,
+    survival1,
+  ];
+  const skillsVariables2 = [
+    animalKen2,
+    drive2,
+    etiquette2,
+    fireArms2,
+    melee2,
+    leadership2,
+    performance2,
+    repair2,
+    stealth2,
+    survival2,
+  ];
+  const skillsVariables3 = [
+    animalKen3,
+    drive3,
+    etiquette3,
+    fireArms3,
+    melee3,
+    leadership3,
+    performance3,
+    repair3,
+    stealth3,
+    survival3,
+  ];
+  const skillsVariables4 = [
+    animalKen4,
+    drive4,
+    etiquette4,
+    fireArms4,
+    melee4,
+    leadership4,
+    performance4,
+    repair4,
+    stealth4,
+    survival4,
+  ];
+  const skillsVariables5 = [
+    animalKen5,
+    drive5,
+    etiquette5,
+    fireArms5,
+    melee5,
+    leadership5,
+    performance5,
+    repair5,
+    stealth5,
+    survival5,
+  ];
+  const knowledgeVariables1 = [
+    computer1,
+    enigmas1,
+    investigation1,
+    law1,
+    linguistics1,
+    medicine1,
+    occult1,
+    politics1,
+    rituals1,
+    science1,
+  ];
+  const knowledgeVariables2 = [
+    computer2,
+    enigmas2,
+    investigation2,
+    law2,
+    linguistics2,
+    medicine2,
+    occult2,
+    politics2,
+    rituals2,
+    science2,
+  ];
+  const knowledgeVariables3 = [
+    computer3,
+    enigmas3,
+    investigation3,
+    law3,
+    linguistics3,
+    medicine3,
+    occult3,
+    politics3,
+    rituals3,
+    science3,
+  ];
+  const knowledgeVariables4 = [
+    computer4,
+    enigmas4,
+    investigation4,
+    law4,
+    linguistics4,
+    medicine4,
+    occult4,
+    politics4,
+    rituals4,
+    science4,
+  ];
+  const knowledgeVariables5 = [
+    computer5,
+    enigmas5,
+    investigation5,
+    law5,
+    linguistics5,
+    medicine5,
+    occult5,
+    politics5,
+    rituals5,
+    science5,
+  ];
+
+  if (randomAbilities.checked == true) {
+    var randomTalentsOption = Math.floor(Math.random() * 3);
+    var randomSkillsOption = Math.floor(Math.random() * 3);
+    var randomKnowledgeOption = Math.floor(Math.random() * 3);
+    if (
+      randomTalentsOption == randomSkillsOption &&
+      randomSkillsOption == randomKnowledgeOption
+    ) {
+      randomTalentsOption = 0;
+      randomSkillsOption = 1;
+      randomKnowledgeOption = 2;
+    } else if (randomTalentsOption == randomSkillsOption) {
+      randomTalentsOption = 1;
+      randomSkillsOption = 2;
+      randomKnowledgeOption = 0;
+    } else if (randomTalentsOption == randomKnowledgeOption) {
+      randomTalentsOption = 2;
+      randomSkillsOption = 1;
+      randomKnowledgeOption = 0;
+    } else if (randomSkillsOption == randomKnowledgeOption) {
+      randomTalentsOption = 0;
+      randomSkillsOption = 2;
+      randomKnowledgeOption = 1;
+    }
+  }
+
+  const temporaryTalentsVariables1 = [];
+  for (var i = 0; i < talentsVariables1.length; i++) {
+    temporaryTalentsVariables1.push(talentsVariables1[i]);
+  }
+
+  const temporaryTalentsVariables2 = [];
+  for (var i = 0; i < talentsVariables2.length; i++) {
+    temporaryTalentsVariables2.push(talentsVariables2[i]);
+  }
+  const temporaryTalentsVariables3 = [];
+  for (var i = 0; i < talentsVariables3.length; i++) {
+    temporaryTalentsVariables3.push(talentsVariables3[i]);
+  }
+  const temporaryTalentsVariables4 = [];
+  for (var i = 0; i < talentsVariables4.length; i++) {
+    temporaryTalentsVariables4.push(talentsVariables4[i]);
+  }
+  const temporaryTalentsVariables5 = [];
+  for (var i = 0; i < talentsVariables5.length; i++) {
+    temporaryTalentsVariables5.push(talentsVariables5[i]);
+  }
+
+  const spliceTalent = function () {
+    temporaryTalentsVariables1.splice(talentsOptions, 1);
+    temporaryTalentsVariables2.splice(talentsOptions, 1);
+    temporaryTalentsVariables3.splice(talentsOptions, 1);
+    temporaryTalentsVariables4.splice(talentsOptions, 1);
+    temporaryTalentsVariables5.splice(talentsOptions, 1);
+  };
+  const talentsFivePoits = function () {
+    temporaryTalentsVariables1[talentsOptions].innerHTML =
+      '<img src="/images/bold-circle.png" />';
+    temporaryTalentsVariables2[talentsOptions].innerHTML =
+      '<img src="/images/bold-circle.png" />';
+    temporaryTalentsVariables3[talentsOptions].innerHTML =
+      '<img src="/images/bold-circle.png" />';
+    temporaryTalentsVariables4[talentsOptions].innerHTML =
+      '<img src="/images/bold-circle.png" />';
+    temporaryTalentsVariables5[talentsOptions].innerHTML =
+      '<img src="/images/bold-circle.png" />';
+  };
+  const talentsFourPoits = function () {
+    temporaryTalentsVariables1[talentsOptions].innerHTML =
+      '<img src="/images/bold-circle.png" />';
+    temporaryTalentsVariables2[talentsOptions].innerHTML =
+      '<img src="/images/bold-circle.png" />';
+    temporaryTalentsVariables3[talentsOptions].innerHTML =
+      '<img src="/images/bold-circle.png" />';
+    temporaryTalentsVariables4[talentsOptions].innerHTML =
+      '<img src="/images/bold-circle.png" />';
+  };
+  const talentsThreePoits = function () {
+    temporaryTalentsVariables1[talentsOptions].innerHTML =
+      '<img src="/images/bold-circle.png" />';
+    temporaryTalentsVariables2[talentsOptions].innerHTML =
+      '<img src="/images/bold-circle.png" />';
+    temporaryTalentsVariables3[talentsOptions].innerHTML =
+      '<img src="/images/bold-circle.png" />';
+  };
+  const talentsTwoPoits = function () {
+    temporaryTalentsVariables1[talentsOptions].innerHTML =
+      '<img src="/images/bold-circle.png" />';
+    temporaryTalentsVariables2[talentsOptions].innerHTML =
+      '<img src="/images/bold-circle.png" />';
+  };
+  const talentsOnePoits = function () {
+    temporaryTalentsVariables1[talentsOptions].innerHTML =
+      '<img src="/images/bold-circle.png" />';
+  };
+
+  if (talents13.checked == true || randomTalentsOption == 0) {
+    var talentsOptions = Math.floor(Math.random() * 10);
+    switch (talentsOptions) {
+      case 0:
+        var talentsOptions = Math.floor(
+          Math.random() * temporaryTalentsVariables1.length
+        );
+        talentsFivePoits();
+        spliceTalent();
+
+        var talentsOptions = Math.floor(
+          Math.random() * temporaryTalentsVariables1.length
+        );
+
+        talentsFivePoits();
+        spliceTalent();
+
+        var talentsOptions = Math.floor(
+          Math.random() * temporaryTalentsVariables1.length
+        );
+        talentsThreePoits();
+        break;
+      case 1:
+        var talentsOptions = Math.floor(
+          Math.random() * temporaryTalentsVariables1.length
+        );
+        talentsFivePoits();
+        spliceTalent();
+
+        var talentsOptions = Math.floor(
+          Math.random() * temporaryTalentsVariables1.length
+        );
+        talentsThreePoits();
+        spliceTalent();
+
+        var talentsOptions = Math.floor(
+          Math.random() * temporaryTalentsVariables1.length
+        );
+        talentsThreePoits();
+        spliceTalent();
+
+        var talentsOptions = Math.floor(
+          Math.random() * temporaryTalentsVariables1.length
+        );
+        talentsTwoPoits();
+        break;
+
+      case 2:
+        var talentsOptions = Math.floor(
+          Math.random() * temporaryTalentsVariables1.length
+        );
+        talentsFivePoits();
+        spliceTalent();
+
+        var talentsOptions = Math.floor(
+          Math.random() * temporaryTalentsVariables1.length
+        );
+        talentsThreePoits();
+        spliceTalent();
+
+        var talentsOptions = Math.floor(
+          Math.random() * temporaryTalentsVariables1.length
+        );
+        talentsFourPoits();
+        spliceTalent();
+
+        var talentsOptions = Math.floor(
+          Math.random() * temporaryTalentsVariables1.length
+        );
+        talentsOnePoits();
+        break;
+
+      case 3:
+        var talentsOptions = Math.floor(
+          Math.random() * temporaryTalentsVariables1.length
+        );
+        talentsFivePoits();
+        spliceTalent();
+
+        var talentsOptions = Math.floor(
+          Math.random() * temporaryTalentsVariables1.length
+        );
+        talentsFivePoits();
+        spliceTalent();
+
+        var talentsOptions = Math.floor(
+          Math.random() * temporaryTalentsVariables1.length
+        );
+        talentsTwoPoits();
+        spliceTalent();
+
+        var talentsOptions = Math.floor(
+          Math.random() * temporaryTalentsVariables1.length
+        );
+        talentsOnePoits();
+
+        break;
+
+      case 4:
+        var talentsOptions = Math.floor(
+          Math.random() * temporaryTalentsVariables1.length
+        );
+        talentsFourPoits();
+        spliceTalent();
+
+        var talentsOptions = Math.floor(
+          Math.random() * temporaryTalentsVariables1.length
+        );
+        talentsFourPoits();
+        spliceTalent();
+
+        var talentsOptions = Math.floor(
+          Math.random() * temporaryTalentsVariables1.length
+        );
+        talentsTwoPoits();
+        spliceTalent();
+
+        var talentsOptions = Math.floor(
+          Math.random() * temporaryTalentsVariables1.length
+        );
+        talentsThreePoits();
+        break;
+
+      case 5:
+        var talentsOptions = Math.floor(
+          Math.random() * temporaryTalentsVariables1.length
+        );
+        talentsFivePoits();
+        spliceTalent();
+
+        var talentsOptions = Math.floor(
+          Math.random() * temporaryTalentsVariables1.length
+        );
+        talentsThreePoits();
+        spliceTalent();
+
+        var talentsOptions = Math.floor(
+          Math.random() * temporaryTalentsVariables1.length
+        );
+        talentsTwoPoits();
+        spliceTalent();
+
+        var talentsOptions = Math.floor(
+          Math.random() * temporaryTalentsVariables1.length
+        );
+        talentsTwoPoits();
+        spliceTalent();
+
+        var talentsOptions = Math.floor(
+          Math.random() * temporaryTalentsVariables1.length
+        );
+        talentsOnePoits();
+        break;
+
+      case 6:
+        var talentsOptions = Math.floor(
+          Math.random() * temporaryTalentsVariables1.length
+        );
+        talentsFourPoits();
+        spliceTalent();
+
+        var talentsOptions = Math.floor(
+          Math.random() * temporaryTalentsVariables1.length
+        );
+        talentsThreePoits();
+        spliceTalent();
+
+        var talentsOptions = Math.floor(
+          Math.random() * temporaryTalentsVariables1.length
+        );
+        talentsThreePoits();
+        spliceTalent();
+
+        var talentsOptions = Math.floor(
+          Math.random() * temporaryTalentsVariables1.length
+        );
+        talentsTwoPoits();
+        spliceTalent();
+
+        var talentsOptions = Math.floor(
+          Math.random() * temporaryTalentsVariables1.length
+        );
+        talentsOnePoits();
+
+        break;
+
+      case 7:
+        var talentsOptions = Math.floor(
+          Math.random() * temporaryTalentsVariables1.length
+        );
+        talentsFivePoits();
+        spliceTalent();
+
+        var talentsOptions = Math.floor(
+          Math.random() * temporaryTalentsVariables1.length
+        );
+        talentsFourPoits();
+        spliceTalent();
+
+        var talentsOptions = Math.floor(
+          Math.random() * temporaryTalentsVariables1.length
+        );
+        talentsOnePoits();
+        spliceTalent();
+
+        var talentsOptions = Math.floor(
+          Math.random() * temporaryTalentsVariables1.length
+        );
+        talentsOnePoits();
+        spliceTalent();
+
+        var talentsOptions = Math.floor(
+          Math.random() * temporaryTalentsVariables1.length
+        );
+        talentsOnePoits();
+        spliceTalent();
+
+        var talentsOptions = Math.floor(
+          Math.random() * temporaryTalentsVariables1.length
+        );
+        talentsOnePoits();
+        break;
+
+      case 8:
+        var talentsOptions = Math.floor(
+          Math.random() * temporaryTalentsVariables1.length
+        );
+        talentsFivePoits();
+        spliceTalent();
+
+        var talentsOptions = Math.floor(
+          Math.random() * temporaryTalentsVariables1.length
+        );
+        talentsThreePoits();
+        spliceTalent();
+
+        var talentsOptions = Math.floor(
+          Math.random() * temporaryTalentsVariables1.length
+        );
+        talentsOnePoits();
+        spliceTalent();
+
+        var talentsOptions = Math.floor(
+          Math.random() * temporaryTalentsVariables1.length
+        );
+        talentsOnePoits();
+        spliceTalent();
+
+        var talentsOptions = Math.floor(
+          Math.random() * temporaryTalentsVariables1.length
+        );
+        talentsOnePoits();
+        spliceTalent();
+
+        var talentsOptions = Math.floor(
+          Math.random() * temporaryTalentsVariables1.length
+        );
+        talentsOnePoits();
+        spliceTalent();
+
+        var talentsOptions = Math.floor(
+          Math.random() * temporaryTalentsVariables1.length
+        );
+        talentsOnePoits();
+
+        break;
+
+      case 9:
+        var talentsOptions = Math.floor(
+          Math.random() * temporaryTalentsVariables1.length
+        );
+        talentsTwoPoits();
+        spliceTalent();
+
+        var talentsOptions = Math.floor(
+          Math.random() * temporaryTalentsVariables1.length
+        );
+        talentsTwoPoits();
+        spliceTalent();
+
+        var talentsOptions = Math.floor(
+          Math.random() * temporaryTalentsVariables1.length
+        );
+        talentsTwoPoits();
+        spliceTalent();
+
+        var talentsOptions = Math.floor(
+          Math.random() * temporaryTalentsVariables1.length
+        );
+        talentsTwoPoits();
+        spliceTalent();
+
+        var talentsOptions = Math.floor(
+          Math.random() * temporaryTalentsVariables1.length
+        );
+        talentsTwoPoits();
+        spliceTalent();
+
+        var talentsOptions = Math.floor(
+          Math.random() * temporaryTalentsVariables1.length
+        );
+        talentsThreePoits();
+        break;
+    }
+  } else if (talents7.checked == true || randomTalentsOption == 1) {
+    var talentsOptions = Math.floor(Math.random() * 10);
+    switch (talentsOptions) {
+      case 0:
+        var talentsOptions = Math.floor(
+          Math.random() * temporaryTalentsVariables1.length
+        );
+        talentsFivePoits();
+        spliceTalent();
+
+        var talentsOptions = Math.floor(
+          Math.random() * temporaryTalentsVariables1.length
+        );
+        talentsFourPoits();
+        break;
+
+      case 1:
+        var talentsOptions = Math.floor(
+          Math.random() * temporaryTalentsVariables1.length
+        );
+        talentsFivePoits();
+        spliceTalent();
+
+        var talentsOptions = Math.floor(
+          Math.random() * temporaryTalentsVariables1.length
+        );
+        talentsTwoPoits();
+        spliceTalent();
+
+        var talentsOptions = Math.floor(
+          Math.random() * temporaryTalentsVariables1.length
+        );
+        talentsTwoPoits();
+        break;
+      case 2:
+        var talentsOptions = Math.floor(
+          Math.random() * temporaryTalentsVariables1.length
+        );
+        talentsFivePoits();
+        spliceTalent();
+
+        var talentsOptions = Math.floor(
+          Math.random() * temporaryTalentsVariables1.length
+        );
+        talentsThreePoits();
+        spliceTalent();
+
+        var talentsOptions = Math.floor(
+          Math.random() * temporaryTalentsVariables1.length
+        );
+        talentsOnePoits();
+        break;
+      case 3:
+        var talentsOptions = Math.floor(
+          Math.random() * temporaryTalentsVariables1.length
+        );
+        talentsThreePoits();
+        spliceTalent();
+
+        var talentsOptions = Math.floor(
+          Math.random() * temporaryTalentsVariables1.length
+        );
+        talentsThreePoits();
+        spliceTalent();
+
+        var talentsOptions = Math.floor(
+          Math.random() * temporaryTalentsVariables1.length
+        );
+        talentsThreePoits();
+        break;
+      case 4:
+        var talentsOptions = Math.floor(
+          Math.random() * temporaryTalentsVariables1.length
+        );
+        talentsFourPoits();
+        spliceTalent();
+
+        var talentsOptions = Math.floor(
+          Math.random() * temporaryTalentsVariables1.length
+        );
+        talentsTwoPoits();
+        spliceTalent();
+
+        var talentsOptions = Math.floor(
+          Math.random() * temporaryTalentsVariables1.length
+        );
+        talentsThreePoits();
+        break;
+      case 5:
+        var talentsOptions = Math.floor(
+          Math.random() * temporaryTalentsVariables1.length
+        );
+        talentsFourPoits();
+        spliceTalent();
+
+        var talentsOptions = Math.floor(
+          Math.random() * temporaryTalentsVariables1.length
+        );
+        talentsOnePoits();
+        spliceTalent();
+
+        var talentsOptions = Math.floor(
+          Math.random() * temporaryTalentsVariables1.length
+        );
+        talentsFourPoits();
+        break;
+      case 6:
+        var talentsOptions = Math.floor(
+          Math.random() * temporaryTalentsVariables1.length
+        );
+        talentsTwoPoits();
+        spliceTalent();
+
+        var talentsOptions = Math.floor(
+          Math.random() * temporaryTalentsVariables1.length
+        );
+        talentsTwoPoits();
+        spliceTalent();
+
+        var talentsOptions = Math.floor(
+          Math.random() * temporaryTalentsVariables1.length
+        );
+        talentsThreePoits();
+        spliceTalent();
+
+        var talentsOptions = Math.floor(
+          Math.random() * temporaryTalentsVariables1.length
+        );
+        talentsTwoPoits();
+        break;
+      case 7:
+        var talentsOptions = Math.floor(
+          Math.random() * temporaryTalentsVariables1.length
+        );
+        talentsOneoits();
+        spliceTalent();
+
+        var talentsOptions = Math.floor(
+          Math.random() * temporaryTalentsVariables1.length
+        );
+        talentsOnePoits();
+        spliceTalent();
+        var talentsOptions = Math.floor(
+          Math.random() * temporaryTalentsVariables1.length
+        );
+        talentsThreePoits();
+        spliceTalent();
+        var talentsOptions = Math.floor(
+          Math.random() * temporaryTalentsVariables1.length
+        );
+        talentsThreePoits();
+        spliceTalent();
+
+        var talentsOptions = Math.floor(
+          Math.random() * temporaryTalentsVariables1.length
+        );
+        talentsOnePoits();
+        break;
+      case 8:
+        var talentsOptions = Math.floor(
+          Math.random() * temporaryTalentsVariables1.length
+        );
+        talentsOnePoits();
+        spliceTalent();
+
+        var talentsOptions = Math.floor(
+          Math.random() * temporaryTalentsVariables1.length
+        );
+        talentsOnePoits();
+        spliceTalent();
+        var talentsOptions = Math.floor(
+          Math.random() * temporaryTalentsVariables1.length
+        );
+        talentsOnePoits();
+        spliceTalent();
+        var talentsOptions = Math.floor(
+          Math.random() * temporaryTalentsVariables1.length
+        );
+        talentsOnePoits();
+        spliceTalent();
+        var talentsOptions = Math.floor(
+          Math.random() * temporaryTalentsVariables1.length
+        );
+        talentsThreePoits();
+        spliceTalent();
+
+        var talentsOptions = Math.floor(
+          Math.random() * temporaryTalentsVariables1.length
+        );
+        talentsTwoPoits();
+        break;
+      case 9:
+        var talentsOptions = Math.floor(
+          Math.random() * temporaryTalentsVariables1.length
+        );
+        talentsOnePoits();
+        spliceTalent();
+
+        var talentsOptions = Math.floor(
+          Math.random() * temporaryTalentsVariables1.length
+        );
+        talentsOnePoits();
+        spliceTalent();
+        var talentsOptions = Math.floor(
+          Math.random() * temporaryTalentsVariables1.length
+        );
+        talentsOnePoits();
+        spliceTalent();
+        var talentsOptions = Math.floor(
+          Math.random() * temporaryTalentsVariables1.length
+        );
+        talentsOnePoits();
+        spliceTalent();
+        var talentsOptions = Math.floor(
+          Math.random() * temporaryTalentsVariables1.length
+        );
+        talentsOnePoits();
+        spliceTalent();
+
+        var talentsOptions = Math.floor(
+          Math.random() * temporaryTalentsVariables1.length
+        );
+        talentsOnePoits();
+        spliceTalent();
+
+        var talentsOptions = Math.floor(
+          Math.random() * temporaryTalentsVariables1.length
+        );
+        talentsTwoPoits();
+        spliceTalent();
+
+        var talentsOptions = Math.floor(
+          Math.random() * temporaryTalentsVariables1.length
+        );
+        talentsTwoPoits();
+        break;
+    }
+  } else if (talents5.checked == true || randomTalentsOption == 2) {
+    var talentsOptions = Math.floor(Math.random() * 7);
+    switch (talentsOptions) {
+      case 0:
+        var talentsOptions = Math.floor(
+          Math.random() * temporaryTalentsVariables1.length
+        );
+        talentsFivePoits();
+        break;
+      case 1:
+        var talentsOptions = Math.floor(
+          Math.random() * temporaryTalentsVariables1.length
+        );
+        talentsFourPoits();
+        spliceTalent();
+        var talentsOptions = Math.floor(
+          Math.random() * temporaryTalentsVariables1.length
+        );
+        talentsOnePoits();
+        break;
+      case 2:
+        var talentsOptions = Math.floor(
+          Math.random() * temporaryTalentsVariables1.length
+        );
+        talentsTwoPoits();
+        spliceTalent();
+        var talentsOptions = Math.floor(
+          Math.random() * temporaryTalentsVariables1.length
+        );
+        talentsThreePoits();
+        break;
+      case 3:
+        var talentsOptions = Math.floor(
+          Math.random() * temporaryTalentsVariables1.length
+        );
+        talentsTwoPoits();
+        spliceTalent();
+        var talentsOptions = Math.floor(
+          Math.random() * temporaryTalentsVariables1.length
+        );
+        talentsTwoPoits();
+        spliceTalent();
+        var talentsOptions = Math.floor(
+          Math.random() * temporaryTalentsVariables1.length
+        );
+        talentsOnePoits();
+
+        break;
+      case 4:
+        var talentsOptions = Math.floor(
+          Math.random() * temporaryTalentsVariables1.length
+        );
+        talentsThreePoits();
+        spliceTalent();
+        var talentsOptions = Math.floor(
+          Math.random() * temporaryTalentsVariables1.length
+        );
+        talentsOnePoits();
+        spliceTalent();
+        var talentsOptions = Math.floor(
+          Math.random() * temporaryTalentsVariables1.length
+        );
+        talentsOnePoits();
+
+        break;
+      case 5:
+        var talentsOptions = Math.floor(
+          Math.random() * temporaryTalentsVariables1.length
+        );
+        talentsTwoPoits();
+        spliceTalent();
+        var talentsOptions = Math.floor(
+          Math.random() * temporaryTalentsVariables1.length
+        );
+        talentsOnePoits();
+        spliceTalent();
+        var talentsOptions = Math.floor(
+          Math.random() * temporaryTalentsVariables1.length
+        );
+        talentsOnePoits();
+        spliceTalent();
+        var talentsOptions = Math.floor(
+          Math.random() * temporaryTalentsVariables1.length
+        );
+        talentsOnePoits();
+
+        break;
+      case 6:
+        var talentsOptions = Math.floor(
+          Math.random() * temporaryTalentsVariables1.length
+        );
+        talentsOnePoits();
+        spliceTalent();
+        var talentsOptions = Math.floor(
+          Math.random() * temporaryTalentsVariables1.length
+        );
+        talentsOnePoits();
+        spliceTalent();
+        var talentsOptions = Math.floor(
+          Math.random() * temporaryTalentsVariables1.length
+        );
+        talentsOnePoits();
+        spliceTalent();
+        var talentsOptions = Math.floor(
+          Math.random() * temporaryTalentsVariables1.length
+        );
+        talentsOnePoits();
+        spliceTalent();
+        var talentsOptions = Math.floor(
+          Math.random() * temporaryTalentsVariables1.length
+        );
+        talentsOnePoits();
+        break;
+    }
+  }
+
+  const temporarySkillsVariables1 = [];
+  for (var i = 0; i < skillsVariables1.length; i++) {
+    temporarySkillsVariables1.push(skillsVariables1[i]);
+  }
+
+  const temporarySkillsVariables2 = [];
+  for (var i = 0; i < skillsVariables2.length; i++) {
+    temporarySkillsVariables2.push(skillsVariables2[i]);
+  }
+  const temporarySkillsVariables3 = [];
+  for (var i = 0; i < skillsVariables3.length; i++) {
+    temporarySkillsVariables3.push(skillsVariables3[i]);
+  }
+  const temporarySkillsVariables4 = [];
+  for (var i = 0; i < skillsVariables4.length; i++) {
+    temporarySkillsVariables4.push(skillsVariables4[i]);
+  }
+  const temporarySkillsVariables5 = [];
+  for (var i = 0; i < skillsVariables5.length; i++) {
+    temporarySkillsVariables5.push(skillsVariables5[i]);
+  }
+
+  const spliceSkills = function () {
+    temporarySkillsVariables1.splice(skillsOptions, 1);
+    temporarySkillsVariables2.splice(skillsOptions, 1);
+    temporarySkillsVariables3.splice(skillsOptions, 1);
+    temporarySkillsVariables4.splice(skillsOptions, 1);
+    temporarySkillsVariables5.splice(skillsOptions, 1);
+  };
+  const skillsFivePoits = function () {
+    temporarySkillsVariables1[skillsOptions].innerHTML =
+      '<img src="/images/bold-circle.png" />';
+    temporarySkillsVariables2[skillsOptions].innerHTML =
+      '<img src="/images/bold-circle.png" />';
+    temporarySkillsVariables3[skillsOptions].innerHTML =
+      '<img src="/images/bold-circle.png" />';
+    temporarySkillsVariables4[skillsOptions].innerHTML =
+      '<img src="/images/bold-circle.png" />';
+    temporarySkillsVariables5[skillsOptions].innerHTML =
+      '<img src="/images/bold-circle.png" />';
+  };
+  const skillsFourPoits = function () {
+    temporarySkillsVariables1[skillsOptions].innerHTML =
+      '<img src="/images/bold-circle.png" />';
+    temporarySkillsVariables2[skillsOptions].innerHTML =
+      '<img src="/images/bold-circle.png" />';
+    temporarySkillsVariables3[skillsOptions].innerHTML =
+      '<img src="/images/bold-circle.png" />';
+    temporarySkillsVariables4[skillsOptions].innerHTML =
+      '<img src="/images/bold-circle.png" />';
+  };
+  const skillsThreePoits = function () {
+    temporarySkillsVariables1[skillsOptions].innerHTML =
+      '<img src="/images/bold-circle.png" />';
+    temporarySkillsVariables2[skillsOptions].innerHTML =
+      '<img src="/images/bold-circle.png" />';
+    temporarySkillsVariables3[skillsOptions].innerHTML =
+      '<img src="/images/bold-circle.png" />';
+  };
+  const skillsTwoPoits = function () {
+    temporarySkillsVariables1[skillsOptions].innerHTML =
+      '<img src="/images/bold-circle.png" />';
+    temporarySkillsVariables2[skillsOptions].innerHTML =
+      '<img src="/images/bold-circle.png" />';
+  };
+  const skillsOnePoits = function () {
+    temporarySkillsVariables1[skillsOptions].innerHTML =
+      '<img src="/images/bold-circle.png" />';
+  };
+
+  if (skills13.checked == true || randomSkillsOption == 0) {
+    var skillsOptions = Math.floor(Math.random() * 10);
+    switch (skillsOptions) {
+      case 0:
+        var skillsOptions = Math.floor(
+          Math.random() * temporarySkillsVariables1.length
+        );
+        skillsFivePoits();
+        spliceSkills();
+
+        var skillsOptions = Math.floor(
+          Math.random() * temporarySkillsVariables1.length
+        );
+
+        skillsFivePoits();
+        spliceSkills();
+
+        var skillsOptions = Math.floor(
+          Math.random() * temporarySkillsVariables1.length
+        );
+        skillsThreePoits();
+        break;
+      case 1:
+        var skillsOptions = Math.floor(
+          Math.random() * temporarySkillsVariables1.length
+        );
+        skillsFivePoits();
+        spliceSkills();
+
+        var skillsOptions = Math.floor(
+          Math.random() * temporarySkillsVariables1.length
+        );
+        skillsThreePoits();
+        spliceSkills();
+
+        var skillsOptions = Math.floor(
+          Math.random() * temporarySkillsVariables1.length
+        );
+        skillsThreePoits();
+        spliceSkills();
+
+        var skillsOptions = Math.floor(
+          Math.random() * temporarySkillsVariables1.length
+        );
+        skillsTwoPoits();
+        break;
+
+      case 2:
+        var skillsOptions = Math.floor(
+          Math.random() * temporarySkillsVariables1.length
+        );
+        skillsFivePoits();
+        spliceSkills();
+
+        var skillsOptions = Math.floor(
+          Math.random() * temporarySkillsVariables1.length
+        );
+        skillsThreePoits();
+        spliceSkills();
+
+        var skillsOptions = Math.floor(
+          Math.random() * temporarySkillsVariables1.length
+        );
+        skillsFourPoits();
+        spliceSkills();
+
+        var skillsOptions = Math.floor(
+          Math.random() * temporarySkillsVariables1.length
+        );
+        skillsOnePoits();
+        break;
+
+      case 3:
+        var skillsOptions = Math.floor(
+          Math.random() * temporarySkillsVariables1.length
+        );
+        skillsFivePoits();
+        spliceSkills();
+
+        var skillsOptions = Math.floor(
+          Math.random() * temporarySkillsVariables1.length
+        );
+        skillsFivePoits();
+        spliceSkills();
+
+        var skillsOptions = Math.floor(
+          Math.random() * temporarySkillsVariables1.length
+        );
+        skillsTwoPoits();
+        spliceSkills();
+
+        var skillsOptions = Math.floor(
+          Math.random() * temporarySkillsVariables1.length
+        );
+        skillsOnePoits();
+
+        break;
+
+      case 4:
+        var skillsOptions = Math.floor(
+          Math.random() * temporarySkillsVariables1.length
+        );
+        skillsFourPoits();
+        spliceSkills();
+
+        var skillsOptions = Math.floor(
+          Math.random() * temporarySkillsVariables1.length
+        );
+        skillsFourPoits();
+        spliceSkills();
+
+        var skillsOptions = Math.floor(
+          Math.random() * temporarySkillsVariables1.length
+        );
+        skillsTwoPoits();
+        spliceSkills();
+
+        var skillsOptions = Math.floor(
+          Math.random() * temporarySkillsVariables1.length
+        );
+        skillsThreePoits();
+        break;
+
+      case 5:
+        var skillsOptions = Math.floor(
+          Math.random() * temporarySkillsVariables1.length
+        );
+        skillsFivePoits();
+        spliceSkills();
+
+        var skillsOptions = Math.floor(
+          Math.random() * temporarySkillsVariables1.length
+        );
+        skillsThreePoits();
+        spliceSkills();
+
+        var skillsOptions = Math.floor(
+          Math.random() * temporarySkillsVariables1.length
+        );
+        skillsTwoPoits();
+        spliceSkills();
+
+        var skillsOptions = Math.floor(
+          Math.random() * temporarySkillsVariables1.length
+        );
+        skillsTwoPoits();
+        spliceSkills();
+
+        var skillsOptions = Math.floor(
+          Math.random() * temporarySkillsVariables1.length
+        );
+        skillsOnePoits();
+        break;
+
+      case 6:
+        var skillsOptions = Math.floor(
+          Math.random() * temporarySkillsVariables1.length
+        );
+        skillsFourPoits();
+        spliceSkills();
+
+        var skillsOptions = Math.floor(
+          Math.random() * temporarySkillsVariables1.length
+        );
+        skillsThreePoits();
+        spliceSkills();
+
+        var skillsOptions = Math.floor(
+          Math.random() * temporarySkillsVariables1.length
+        );
+        skillsThreePoits();
+        spliceSkills();
+
+        var skillsOptions = Math.floor(
+          Math.random() * temporarySkillsVariables1.length
+        );
+        skillsTwoPoits();
+        spliceSkills();
+
+        var skillsOptions = Math.floor(
+          Math.random() * temporarySkillsVariables1.length
+        );
+        skillsOnePoits();
+
+        break;
+
+      case 7:
+        var skillsOptions = Math.floor(
+          Math.random() * temporarySkillsVariables1.length
+        );
+        skillsFivePoits();
+        spliceSkills();
+
+        var skillsOptions = Math.floor(
+          Math.random() * temporarySkillsVariables1.length
+        );
+        skillsFourPoits();
+        spliceSkills();
+
+        var skillsOptions = Math.floor(
+          Math.random() * temporarySkillsVariables1.length
+        );
+        skillsOnePoits();
+        spliceSkills();
+
+        var skillsOptions = Math.floor(
+          Math.random() * temporarySkillsVariables1.length
+        );
+        skillsOnePoits();
+        spliceSkills();
+
+        var skillsOptions = Math.floor(
+          Math.random() * temporarySkillsVariables1.length
+        );
+        skillsOnePoits();
+        spliceSkills();
+
+        var skillsOptions = Math.floor(
+          Math.random() * temporarySkillsVariables1.length
+        );
+        skillsOnePoits();
+        break;
+
+      case 8:
+        var skillsOptions = Math.floor(
+          Math.random() * temporarySkillsVariables1.length
+        );
+        skillsFivePoits();
+        spliceSkills();
+
+        var skillsOptions = Math.floor(
+          Math.random() * temporarySkillsVariables1.length
+        );
+        skillsThreePoits();
+        spliceSkills();
+
+        var skillsOptions = Math.floor(
+          Math.random() * temporarySkillsVariables1.length
+        );
+        skillsOnePoits();
+        spliceSkills();
+
+        var skillsOptions = Math.floor(
+          Math.random() * temporarySkillsVariables1.length
+        );
+        skillsOnePoits();
+        spliceSkills();
+
+        var skillsOptions = Math.floor(
+          Math.random() * temporarySkillsVariables1.length
+        );
+        skillsOnePoits();
+        spliceSkills();
+
+        var skillsOptions = Math.floor(
+          Math.random() * temporarySkillsVariables1.length
+        );
+        skillsOnePoits();
+        spliceSkills();
+
+        var skillsOptions = Math.floor(
+          Math.random() * temporarySkillsVariables1.length
+        );
+        skillsOnePoits();
+
+        break;
+
+      case 9:
+        var skillsOptions = Math.floor(
+          Math.random() * temporarySkillsVariables1.length
+        );
+        skillsTwoPoits();
+        spliceSkills();
+
+        var skillsOptions = Math.floor(
+          Math.random() * temporarySkillsVariables1.length
+        );
+        skillsTwoPoits();
+        spliceSkills();
+
+        var skillsOptions = Math.floor(
+          Math.random() * temporarySkillsVariables1.length
+        );
+        skillsTwoPoits();
+        spliceSkills();
+
+        var skillsOptions = Math.floor(
+          Math.random() * temporarySkillsVariables1.length
+        );
+        skillsTwoPoits();
+        spliceSkills();
+
+        var skillsOptions = Math.floor(
+          Math.random() * temporarySkillsVariables1.length
+        );
+        skillsTwoPoits();
+        spliceSkills();
+
+        var skillsOptions = Math.floor(
+          Math.random() * temporarySkillsVariables1.length
+        );
+        skillsThreePoits();
+        break;
+    }
+  } else if (skills7.checked == true || randomSkillsOption == 1) {
+    var skillsOptions = Math.floor(Math.random() * 10);
+    switch (skillsOptions) {
+      case 0:
+        var skillsOptions = Math.floor(
+          Math.random() * temporarySkillsVariables1.length
+        );
+        skillsFivePoits();
+        spliceSkills();
+
+        var skillsOptions = Math.floor(
+          Math.random() * temporarySkillsVariables1.length
+        );
+        skillsFourPoits();
+        break;
+
+      case 1:
+        var skillsOptions = Math.floor(
+          Math.random() * temporarySkillsVariables1.length
+        );
+        skillsFivePoits();
+        spliceSkills();
+
+        var skillsOptions = Math.floor(
+          Math.random() * temporarySkillsVariables1.length
+        );
+        skillsTwoPoits();
+        spliceSkills();
+
+        var skillsOptions = Math.floor(
+          Math.random() * temporarySkillsVariables1.length
+        );
+        skillsTwoPoits();
+        break;
+      case 2:
+        var skillsOptions = Math.floor(
+          Math.random() * temporarySkillsVariables1.length
+        );
+        skillsFivePoits();
+        spliceSkills();
+
+        var skillsOptions = Math.floor(
+          Math.random() * temporarySkillsVariables1.length
+        );
+        skillsThreePoits();
+        spliceSkills();
+
+        var skillsOptions = Math.floor(
+          Math.random() * temporarySkillsVariables1.length
+        );
+        skillsOnePoits();
+        break;
+      case 3:
+        var skillsOptions = Math.floor(
+          Math.random() * temporarySkillsVariables1.length
+        );
+        skillsThreePoits();
+        spliceSkills();
+
+        var skillsOptions = Math.floor(
+          Math.random() * temporarySkillsVariables1.length
+        );
+        skillsThreePoits();
+        spliceSkills();
+
+        var skillsOptions = Math.floor(
+          Math.random() * temporarySkillsVariables1.length
+        );
+        skillsThreePoits();
+        break;
+      case 4:
+        var skillsOptions = Math.floor(
+          Math.random() * temporarySkillsVariables1.length
+        );
+        skillsFourPoits();
+        spliceSkills();
+
+        var skillsOptions = Math.floor(
+          Math.random() * temporarySkillsVariables1.length
+        );
+        skillsTwoPoits();
+        spliceSkills();
+
+        var skillsOptions = Math.floor(
+          Math.random() * temporarySkillsVariables1.length
+        );
+        skillsThreePoits();
+        break;
+      case 5:
+        var skillsOptions = Math.floor(
+          Math.random() * temporarySkillsVariables1.length
+        );
+        skillsFourPoits();
+        spliceSkills();
+
+        var skillsOptions = Math.floor(
+          Math.random() * temporarySkillsVariables1.length
+        );
+        skillsOnePoits();
+        spliceSkills();
+
+        var skillsOptions = Math.floor(
+          Math.random() * temporarySkillsVariables1.length
+        );
+        skillsFourPoits();
+        break;
+      case 6:
+        var skillsOptions = Math.floor(
+          Math.random() * temporarySkillsVariables1.length
+        );
+        skillsTwoPoits();
+        spliceSkills();
+
+        var skillsOptions = Math.floor(
+          Math.random() * temporarySkillsVariables1.length
+        );
+        skillsTwoPoits();
+        spliceSkills();
+
+        var skillsOptions = Math.floor(
+          Math.random() * temporarySkillsVariables1.length
+        );
+        skillsThreePoits();
+        spliceSkills();
+
+        var skillsOptions = Math.floor(
+          Math.random() * temporarySkillsVariables1.length
+        );
+        skillsTwoPoits();
+        break;
+      case 7:
+        var skillsOptions = Math.floor(
+          Math.random() * temporarySkillsVariables1.length
+        );
+        skillsOneoits();
+        spliceSkills();
+
+        var skillsOptions = Math.floor(
+          Math.random() * temporarySkillsVariables1.length
+        );
+        skillsOnePoits();
+        spliceSkills();
+        var skillsOptions = Math.floor(
+          Math.random() * temporarySkillsVariables1.length
+        );
+        skillsThreePoits();
+        spliceSkills();
+        var skillsOptions = Math.floor(
+          Math.random() * temporarySkillsVariables1.length
+        );
+        skillsThreePoits();
+        spliceSkills();
+
+        var skillsOptions = Math.floor(
+          Math.random() * temporarySkillsVariables1.length
+        );
+        skillsOnePoits();
+        break;
+      case 8:
+        var skillsOptions = Math.floor(
+          Math.random() * temporarySkillsVariables1.length
+        );
+        skillsOnePoits();
+        spliceSkills();
+
+        var skillsOptions = Math.floor(
+          Math.random() * temporarySkillsVariables1.length
+        );
+        skillsOnePoits();
+        spliceSkills();
+        var skillsOptions = Math.floor(
+          Math.random() * temporarySkillsVariables1.length
+        );
+        skillsOnePoits();
+        spliceSkills();
+        var skillsOptions = Math.floor(
+          Math.random() * temporarySkillsVariables1.length
+        );
+        skillsOnePoits();
+        spliceSkills();
+        var skillsOptions = Math.floor(
+          Math.random() * temporarySkillsVariables1.length
+        );
+        skillsThreePoits();
+        spliceSkills();
+
+        var skillsOptions = Math.floor(
+          Math.random() * temporarySkillsVariables1.length
+        );
+        skillsTwoPoits();
+        break;
+      case 9:
+        var skillsOptions = Math.floor(
+          Math.random() * temporarySkillsVariables1.length
+        );
+        skillsOnePoits();
+        spliceSkills();
+
+        var skillsOptions = Math.floor(
+          Math.random() * temporarySkillsVariables1.length
+        );
+        skillsOnePoits();
+        spliceSkills();
+        var skillsOptions = Math.floor(
+          Math.random() * temporarySkillsVariables1.length
+        );
+        skillsOnePoits();
+        spliceSkills();
+        var skillsOptions = Math.floor(
+          Math.random() * temporarySkillsVariables1.length
+        );
+        skillsOnePoits();
+        spliceSkills();
+        var skillsOptions = Math.floor(
+          Math.random() * temporarySkillsVariables1.length
+        );
+        skillsOnePoits();
+        spliceSkills();
+
+        var skillsOptions = Math.floor(
+          Math.random() * temporarySkillsVariables1.length
+        );
+        skillsOnePoits();
+        spliceSkills();
+
+        var skillsOptions = Math.floor(
+          Math.random() * temporarySkillsVariables1.length
+        );
+        skillsTwoPoits();
+        spliceSkills();
+
+        var skillsOptions = Math.floor(
+          Math.random() * temporarySkillsVariables1.length
+        );
+        skillsTwoPoits();
+        break;
+    }
+  } else if (skills5.checked == true || randomSkillsOption == 2) {
+    var skillsOptions = Math.floor(Math.random() * 7);
+    switch (skillsOptions) {
+      case 0:
+        var skillsOptions = Math.floor(
+          Math.random() * temporarySkillsVariables1.length
+        );
+        skillsFivePoits();
+        break;
+      case 1:
+        var skillsOptions = Math.floor(
+          Math.random() * temporarySkillsVariables1.length
+        );
+        skillsFourPoits();
+        spliceSkills();
+        var skillsOptions = Math.floor(
+          Math.random() * temporarySkillsVariables1.length
+        );
+        skillsOnePoits();
+        break;
+      case 2:
+        var skillsOptions = Math.floor(
+          Math.random() * temporarySkillsVariables1.length
+        );
+        skillsTwoPoits();
+        spliceSkills();
+        var skillsOptions = Math.floor(
+          Math.random() * temporarySkillsVariables1.length
+        );
+        skillsThreePoits();
+        break;
+      case 3:
+        var skillsOptions = Math.floor(
+          Math.random() * temporarySkillsVariables1.length
+        );
+        skillsTwoPoits();
+        spliceSkills();
+        var skillsOptions = Math.floor(
+          Math.random() * temporarySkillsVariables1.length
+        );
+        skillsTwoPoits();
+        spliceSkills();
+        var skillsOptions = Math.floor(
+          Math.random() * temporarySkillsVariables1.length
+        );
+        skillsOnePoits();
+
+        break;
+      case 4:
+        var skillsOptions = Math.floor(
+          Math.random() * temporarySkillsVariables1.length
+        );
+        skillsThreePoits();
+        spliceSkills();
+        var skillsOptions = Math.floor(
+          Math.random() * temporarySkillsVariables1.length
+        );
+        skillsOnePoits();
+        spliceSkills();
+        var skillsOptions = Math.floor(
+          Math.random() * temporarySkillsVariables1.length
+        );
+        skillsOnePoits();
+
+        break;
+      case 5:
+        var skillsOptions = Math.floor(
+          Math.random() * temporarySkillsVariables1.length
+        );
+        skillsTwoPoits();
+        spliceSkills();
+        var skillsOptions = Math.floor(
+          Math.random() * temporarySkillsVariables1.length
+        );
+        skillsOnePoits();
+        spliceSkills();
+        var skillsOptions = Math.floor(
+          Math.random() * temporarySkillsVariables1.length
+        );
+        skillsOnePoits();
+        spliceSkills();
+        var skillsOptions = Math.floor(
+          Math.random() * temporarySkillsVariables1.length
+        );
+        skillsOnePoits();
+
+        break;
+      case 6:
+        var skillsOptions = Math.floor(
+          Math.random() * temporarySkillsVariables1.length
+        );
+        skillsOnePoits();
+        spliceSkills();
+        var skillsOptions = Math.floor(
+          Math.random() * temporarySkillsVariables1.length
+        );
+        skillsOnePoits();
+        spliceSkills();
+        var skillsOptions = Math.floor(
+          Math.random() * temporarySkillsVariables1.length
+        );
+        skillsOnePoits();
+        spliceSkills();
+        var skillsOptions = Math.floor(
+          Math.random() * temporarySkillsVariables1.length
+        );
+        skillsOnePoits();
+        spliceSkills();
+        var skillsOptions = Math.floor(
+          Math.random() * temporarySkillsVariables1.length
+        );
+        skillsOnePoits();
+        break;
+    }
+  }
+
+  const temporaryKnowledgeVariables1 = [];
+  for (var i = 0; i < knowledgeVariables1.length; i++) {
+    temporaryKnowledgeVariables1.push(knowledgeVariables1[i]);
+  }
+
+  const temporaryKnowledgeVariables2 = [];
+  for (var i = 0; i < knowledgeVariables2.length; i++) {
+    temporaryKnowledgeVariables2.push(knowledgeVariables2[i]);
+  }
+  const temporaryKnowledgeVariables3 = [];
+  for (var i = 0; i < knowledgeVariables3.length; i++) {
+    temporaryKnowledgeVariables3.push(knowledgeVariables3[i]);
+  }
+  const temporaryKnowledgeVariables4 = [];
+  for (var i = 0; i < knowledgeVariables4.length; i++) {
+    temporaryKnowledgeVariables4.push(knowledgeVariables4[i]);
+  }
+  const temporaryKnowledgeVariables5 = [];
+  for (var i = 0; i < knowledgeVariables5.length; i++) {
+    temporaryKnowledgeVariables5.push(knowledgeVariables5[i]);
+  }
+
+  const spliceKnowledge = function () {
+    temporaryKnowledgeVariables1.splice(knowledgeOptions, 1);
+    temporaryKnowledgeVariables2.splice(knowledgeOptions, 1);
+    temporaryKnowledgeVariables3.splice(knowledgeOptions, 1);
+    temporaryKnowledgeVariables4.splice(knowledgeOptions, 1);
+    temporaryKnowledgeVariables5.splice(knowledgeOptions, 1);
+  };
+  const knowledgeFivePoits = function () {
+    temporaryKnowledgeVariables1[knowledgeOptions].innerHTML =
+      '<img src="/images/bold-circle.png" />';
+    temporaryKnowledgeVariables2[knowledgeOptions].innerHTML =
+      '<img src="/images/bold-circle.png" />';
+    temporaryKnowledgeVariables3[knowledgeOptions].innerHTML =
+      '<img src="/images/bold-circle.png" />';
+    temporaryKnowledgeVariables4[knowledgeOptions].innerHTML =
+      '<img src="/images/bold-circle.png" />';
+    temporaryKnowledgeVariables5[knowledgeOptions].innerHTML =
+      '<img src="/images/bold-circle.png" />';
+  };
+  const knowledgeFourPoits = function () {
+    temporaryKnowledgeVariables1[knowledgeOptions].innerHTML =
+      '<img src="/images/bold-circle.png" />';
+    temporaryKnowledgeVariables2[knowledgeOptions].innerHTML =
+      '<img src="/images/bold-circle.png" />';
+    temporaryKnowledgeVariables3[knowledgeOptions].innerHTML =
+      '<img src="/images/bold-circle.png" />';
+    temporaryKnowledgeVariables4[knowledgeOptions].innerHTML =
+      '<img src="/images/bold-circle.png" />';
+  };
+  const knowledgeThreePoits = function () {
+    temporaryKnowledgeVariables1[knowledgeOptions].innerHTML =
+      '<img src="/images/bold-circle.png" />';
+    temporaryKnowledgeVariables2[knowledgeOptions].innerHTML =
+      '<img src="/images/bold-circle.png" />';
+    temporaryKnowledgeVariables3[knowledgeOptions].innerHTML =
+      '<img src="/images/bold-circle.png" />';
+  };
+  const knowledgeTwoPoits = function () {
+    temporaryKnowledgeVariables1[knowledgeOptions].innerHTML =
+      '<img src="/images/bold-circle.png" />';
+    temporaryKnowledgeVariables2[knowledgeOptions].innerHTML =
+      '<img src="/images/bold-circle.png" />';
+  };
+  const knowledgeOnePoits = function () {
+    temporaryKnowledgeVariables1[knowledgeOptions].innerHTML =
+      '<img src="/images/bold-circle.png" />';
+  };
+
+  if (knowledge13.checked == true || randomKnowledgeOption == 0) {
+    var knowledgeOptions = Math.floor(Math.random() * 10);
+    switch (knowledgeOptions) {
+      case 0:
+        var knowledgeOptions = Math.floor(
+          Math.random() * temporaryKnowledgeVariables1.length
+        );
+        knowledgeFivePoits();
+        spliceKnowledge();
+
+        var knowledgeOptions = Math.floor(
+          Math.random() * temporaryKnowledgeVariables1.length
+        );
+
+        knowledgeFivePoits();
+        spliceKnowledge();
+
+        var knowledgeOptions = Math.floor(
+          Math.random() * temporaryKnowledgeVariables1.length
+        );
+        knowledgeThreePoits();
+        break;
+      case 1:
+        var knowledgeOptions = Math.floor(
+          Math.random() * temporaryKnowledgeVariables1.length
+        );
+        knowledgeFivePoits();
+        spliceKnowledge();
+
+        var knowledgeOptions = Math.floor(
+          Math.random() * temporaryKnowledgeVariables1.length
+        );
+        knowledgeThreePoits();
+        spliceKnowledge();
+
+        var knowledgeOptions = Math.floor(
+          Math.random() * temporaryKnowledgeVariables1.length
+        );
+        knowledgeThreePoits();
+        spliceKnowledge();
+
+        var knowledgeOptions = Math.floor(
+          Math.random() * temporaryKnowledgeVariables1.length
+        );
+        knowledgeTwoPoits();
+        break;
+
+      case 2:
+        var knowledgeOptions = Math.floor(
+          Math.random() * temporaryKnowledgeVariables1.length
+        );
+        knowledgeFivePoits();
+        spliceKnowledge();
+
+        var knowledgeOptions = Math.floor(
+          Math.random() * temporaryKnowledgeVariables1.length
+        );
+        knowledgeThreePoits();
+        spliceKnowledge();
+
+        var knowledgeOptions = Math.floor(
+          Math.random() * temporaryKnowledgeVariables1.length
+        );
+        knowledgeFourPoits();
+        spliceKnowledge();
+
+        var knowledgeOptions = Math.floor(
+          Math.random() * temporaryKnowledgeVariables1.length
+        );
+        knowledgeOnePoits();
+        break;
+
+      case 3:
+        var knowledgeOptions = Math.floor(
+          Math.random() * temporaryKnowledgeVariables1.length
+        );
+        knowledgeFivePoits();
+        spliceKnowledge();
+
+        var knowledgeOptions = Math.floor(
+          Math.random() * temporaryKnowledgeVariables1.length
+        );
+        knowledgeFivePoits();
+        spliceKnowledge();
+
+        var knowledgeOptions = Math.floor(
+          Math.random() * temporaryKnowledgeVariables1.length
+        );
+        knowledgeTwoPoits();
+        spliceKnowledge();
+
+        var knowledgeOptions = Math.floor(
+          Math.random() * temporaryKnowledgeVariables1.length
+        );
+        knowledgeOnePoits();
+
+        break;
+
+      case 4:
+        var knowledgeOptions = Math.floor(
+          Math.random() * temporaryKnowledgeVariables1.length
+        );
+        knowledgeFourPoits();
+        spliceKnowledge();
+
+        var knowledgeOptions = Math.floor(
+          Math.random() * temporaryKnowledgeVariables1.length
+        );
+        knowledgeFourPoits();
+        spliceKnowledge();
+
+        var knowledgeOptions = Math.floor(
+          Math.random() * temporaryKnowledgeVariables1.length
+        );
+        knowledgeTwoPoits();
+        spliceKnowledge();
+
+        var knowledgeOptions = Math.floor(
+          Math.random() * temporaryKnowledgeVariables1.length
+        );
+        knowledgeThreePoits();
+        break;
+
+      case 5:
+        var knowledgeOptions = Math.floor(
+          Math.random() * temporaryKnowledgeVariables1.length
+        );
+        knowledgeFivePoits();
+        spliceKnowledge();
+
+        var knowledgeOptions = Math.floor(
+          Math.random() * temporaryKnowledgeVariables1.length
+        );
+        knowledgeThreePoits();
+        spliceKnowledge();
+
+        var knowledgeOptions = Math.floor(
+          Math.random() * temporaryKnowledgeVariables1.length
+        );
+        knowledgeTwoPoits();
+        spliceKnowledge();
+
+        var knowledgeOptions = Math.floor(
+          Math.random() * temporaryKnowledgeVariables1.length
+        );
+        knowledgeTwoPoits();
+        spliceKnowledge();
+
+        var knowledgeOptions = Math.floor(
+          Math.random() * temporaryKnowledgeVariables1.length
+        );
+        knowledgeOnePoits();
+        break;
+
+      case 6:
+        var knowledgeOptions = Math.floor(
+          Math.random() * temporaryKnowledgeVariables1.length
+        );
+        knowledgeFourPoits();
+        spliceKnowledge();
+
+        var knowledgeOptions = Math.floor(
+          Math.random() * temporaryKnowledgeVariables1.length
+        );
+        knowledgeThreePoits();
+        spliceKnowledge();
+
+        var knowledgeOptions = Math.floor(
+          Math.random() * temporaryKnowledgeVariables1.length
+        );
+        knowledgeThreePoits();
+        spliceKnowledge();
+
+        var knowledgeOptions = Math.floor(
+          Math.random() * temporaryKnowledgeVariables1.length
+        );
+        knowledgeTwoPoits();
+        spliceKnowledge();
+
+        var knowledgeOptions = Math.floor(
+          Math.random() * temporaryKnowledgeVariables1.length
+        );
+        knowledgeOnePoits();
+
+        break;
+
+      case 7:
+        var knowledgeOptions = Math.floor(
+          Math.random() * temporaryKnowledgeVariables1.length
+        );
+        knowledgeFivePoits();
+        spliceKnowledge();
+
+        var knowledgeOptions = Math.floor(
+          Math.random() * temporaryKnowledgeVariables1.length
+        );
+        knowledgeFourPoits();
+        spliceKnowledge();
+
+        var knowledgeOptions = Math.floor(
+          Math.random() * temporaryKnowledgeVariables1.length
+        );
+        knowledgeOnePoits();
+        spliceKnowledge();
+
+        var knowledgeOptions = Math.floor(
+          Math.random() * temporaryKnowledgeVariables1.length
+        );
+        knowledgeOnePoits();
+        spliceKnowledge();
+
+        var knowledgeOptions = Math.floor(
+          Math.random() * temporaryKnowledgeVariables1.length
+        );
+        knowledgeOnePoits();
+        spliceKnowledge();
+
+        var knowledgeOptions = Math.floor(
+          Math.random() * temporaryKnowledgeVariables1.length
+        );
+        knowledgeOnePoits();
+        break;
+
+      case 8:
+        var knowledgeOptions = Math.floor(
+          Math.random() * temporaryKnowledgeVariables1.length
+        );
+        knowledgeFivePoits();
+        spliceKnowledge();
+
+        var knowledgeOptions = Math.floor(
+          Math.random() * temporaryKnowledgeVariables1.length
+        );
+        knowledgeThreePoits();
+        spliceKnowledge();
+
+        var knowledgeOptions = Math.floor(
+          Math.random() * temporaryKnowledgeVariables1.length
+        );
+        knowledgeOnePoits();
+        spliceKnowledge();
+
+        var knowledgeOptions = Math.floor(
+          Math.random() * temporaryKnowledgeVariables1.length
+        );
+        knowledgeOnePoits();
+        spliceKnowledge();
+
+        var knowledgeOptions = Math.floor(
+          Math.random() * temporaryKnowledgeVariables1.length
+        );
+        knowledgeOnePoits();
+        spliceKnowledge();
+
+        var knowledgeOptions = Math.floor(
+          Math.random() * temporaryKnowledgeVariables1.length
+        );
+        knowledgeOnePoits();
+        spliceKnowledge();
+
+        var knowledgeOptions = Math.floor(
+          Math.random() * temporaryKnowledgeVariables1.length
+        );
+        knowledgeOnePoits();
+
+        break;
+
+      case 9:
+        var knowledgeOptions = Math.floor(
+          Math.random() * temporaryKnowledgeVariables1.length
+        );
+        knowledgeTwoPoits();
+        spliceKnowledge();
+
+        var knowledgeOptions = Math.floor(
+          Math.random() * temporaryKnowledgeVariables1.length
+        );
+        knowledgeTwoPoits();
+        spliceKnowledge();
+
+        var knowledgeOptions = Math.floor(
+          Math.random() * temporaryKnowledgeVariables1.length
+        );
+        knowledgeTwoPoits();
+        spliceKnowledge();
+
+        var knowledgeOptions = Math.floor(
+          Math.random() * temporaryKnowledgeVariables1.length
+        );
+        knowledgeTwoPoits();
+        spliceKnowledge();
+
+        var knowledgeOptions = Math.floor(
+          Math.random() * temporaryKnowledgeVariables1.length
+        );
+        knowledgeTwoPoits();
+        spliceKnowledge();
+
+        var knowledgeOptions = Math.floor(
+          Math.random() * temporaryKnowledgeVariables1.length
+        );
+        knowledgeThreePoits();
+        break;
+    }
+  } else if (knowledge7.checked == true || randomKnowledgeOption == 1) {
+    var knowledgeOptions = Math.floor(Math.random() * 10);
+    switch (knowledgeOptions) {
+      case 0:
+        var knowledgeOptions = Math.floor(
+          Math.random() * temporaryKnowledgeVariables1.length
+        );
+        knowledgeFivePoits();
+        spliceKnowledge();
+
+        var knowledgeOptions = Math.floor(
+          Math.random() * temporaryKnowledgeVariables1.length
+        );
+        knowledgeFourPoits();
+        break;
+
+      case 1:
+        var knowledgeOptions = Math.floor(
+          Math.random() * temporaryKnowledgeVariables1.length
+        );
+        knowledgeFivePoits();
+        spliceKnowledge();
+
+        var knowledgeOptions = Math.floor(
+          Math.random() * temporaryKnowledgeVariables1.length
+        );
+        knowledgeTwoPoits();
+        spliceKnowledge();
+
+        var knowledgeOptions = Math.floor(
+          Math.random() * temporaryKnowledgeVariables1.length
+        );
+        knowledgeTwoPoits();
+        break;
+      case 2:
+        var knowledgeOptions = Math.floor(
+          Math.random() * temporaryKnowledgeVariables1.length
+        );
+        knowledgeFivePoits();
+        spliceKnowledge();
+
+        var knowledgeOptions = Math.floor(
+          Math.random() * temporaryKnowledgeVariables1.length
+        );
+        knowledgeThreePoits();
+        spliceKnowledge();
+
+        var knowledgeOptions = Math.floor(
+          Math.random() * temporaryKnowledgeVariables1.length
+        );
+        knowledgeOnePoits();
+        break;
+      case 3:
+        var knowledgeOptions = Math.floor(
+          Math.random() * temporaryKnowledgeVariables1.length
+        );
+        knowledgeThreePoits();
+        spliceKnowledge();
+
+        var knowledgeOptions = Math.floor(
+          Math.random() * temporaryKnowledgeVariables1.length
+        );
+        knowledgeThreePoits();
+        spliceKnowledge();
+
+        var knowledgeOptions = Math.floor(
+          Math.random() * temporaryKnowledgeVariables1.length
+        );
+        knowledgeThreePoits();
+        break;
+      case 4:
+        var knowledgeOptions = Math.floor(
+          Math.random() * temporaryKnowledgeVariables1.length
+        );
+        knowledgeFourPoits();
+        spliceKnowledge();
+
+        var knowledgeOptions = Math.floor(
+          Math.random() * temporaryKnowledgeVariables1.length
+        );
+        knowledgeTwoPoits();
+        spliceKnowledge();
+
+        var knowledgeOptions = Math.floor(
+          Math.random() * temporaryKnowledgeVariables1.length
+        );
+        knowledgeThreePoits();
+        break;
+      case 5:
+        var knowledgeOptions = Math.floor(
+          Math.random() * temporaryKnowledgeVariables1.length
+        );
+        knowledgeFourPoits();
+        spliceKnowledge();
+
+        var knowledgeOptions = Math.floor(
+          Math.random() * temporaryKnowledgeVariables1.length
+        );
+        knowledgeOnePoits();
+        spliceKnowledge();
+
+        var knowledgeOptions = Math.floor(
+          Math.random() * temporaryKnowledgeVariables1.length
+        );
+        knowledgeFourPoits();
+        break;
+      case 6:
+        var knowledgeOptions = Math.floor(
+          Math.random() * temporaryKnowledgeVariables1.length
+        );
+        knowledgeTwoPoits();
+        spliceKnowledge();
+
+        var knowledgeOptions = Math.floor(
+          Math.random() * temporaryKnowledgeVariables1.length
+        );
+        knowledgeTwoPoits();
+        spliceKnowledge();
+
+        var knowledgeOptions = Math.floor(
+          Math.random() * temporaryKnowledgeVariables1.length
+        );
+        knowledgeThreePoits();
+        spliceKnowledge();
+
+        var knowledgeOptions = Math.floor(
+          Math.random() * temporaryKnowledgeVariables1.length
+        );
+        knowledgeTwoPoits();
+        break;
+      case 7:
+        var knowledgeOptions = Math.floor(
+          Math.random() * temporaryKnowledgeVariables1.length
+        );
+        knowledgeOneoits();
+        spliceKnowledge();
+
+        var knowledgeOptions = Math.floor(
+          Math.random() * temporaryKnowledgeVariables1.length
+        );
+        knowledgeOnePoits();
+        spliceKnowledge();
+        var knowledgeOptions = Math.floor(
+          Math.random() * temporaryKnowledgeVariables1.length
+        );
+        knowledgeThreePoits();
+        spliceKnowledge();
+        var knowledgeOptions = Math.floor(
+          Math.random() * temporaryKnowledgeVariables1.length
+        );
+        knowledgeThreePoits();
+        spliceKnowledge();
+
+        var knowledgeOptions = Math.floor(
+          Math.random() * temporaryKnowledgeVariables1.length
+        );
+        knowledgeOnePoits();
+        break;
+      case 8:
+        var knowledgeOptions = Math.floor(
+          Math.random() * temporaryKnowledgeVariables1.length
+        );
+        knowledgeOnePoits();
+        spliceKnowledge();
+
+        var knowledgeOptions = Math.floor(
+          Math.random() * temporaryKnowledgeVariables1.length
+        );
+        knowledgeOnePoits();
+        spliceKnowledge();
+        var knowledgeOptions = Math.floor(
+          Math.random() * temporaryKnowledgeVariables1.length
+        );
+        knowledgeOnePoits();
+        spliceKnowledge();
+        var knowledgeOptions = Math.floor(
+          Math.random() * temporaryKnowledgeVariables1.length
+        );
+        knowledgeOnePoits();
+        spliceKnowledge();
+        var knowledgeOptions = Math.floor(
+          Math.random() * temporaryKnowledgeVariables1.length
+        );
+        knowledgeThreePoits();
+        spliceKnowledge();
+
+        var knowledgeOptions = Math.floor(
+          Math.random() * temporaryKnowledgeVariables1.length
+        );
+        knowledgeTwoPoits();
+        break;
+      case 9:
+        var knowledgeOptions = Math.floor(
+          Math.random() * temporaryKnowledgeVariables1.length
+        );
+        knowledgeOnePoits();
+        spliceKnowledge();
+
+        var knowledgeOptions = Math.floor(
+          Math.random() * temporaryKnowledgeVariables1.length
+        );
+        knowledgeOnePoits();
+        spliceKnowledge();
+        var knowledgeOptions = Math.floor(
+          Math.random() * temporaryKnowledgeVariables1.length
+        );
+        knowledgeOnePoits();
+        spliceKnowledge();
+        var knowledgeOptions = Math.floor(
+          Math.random() * temporaryKnowledgeVariables1.length
+        );
+        knowledgeOnePoits();
+        spliceKnowledge();
+        var knowledgeOptions = Math.floor(
+          Math.random() * temporaryKnowledgeVariables1.length
+        );
+        knowledgeOnePoits();
+        spliceKnowledge();
+
+        var knowledgeOptions = Math.floor(
+          Math.random() * temporaryKnowledgeVariables1.length
+        );
+        knowledgeOnePoits();
+        spliceKnowledge();
+
+        var knowledgeOptions = Math.floor(
+          Math.random() * temporaryKnowledgeVariables1.length
+        );
+        knowledgeTwoPoits();
+        spliceKnowledge();
+
+        var knowledgeOptions = Math.floor(
+          Math.random() * temporaryKnowledgeVariables1.length
+        );
+        knowledgeTwoPoits();
+        break;
+    }
+  } else if (knowledge5.checked == true || randomKnowledgeOption == 2) {
+    var knowledgeOptions = Math.floor(Math.random() * 7);
+    switch (knowledgeOptions) {
+      case 0:
+        var knowledgeOptions = Math.floor(
+          Math.random() * temporaryKnowledgeVariables1.length
+        );
+        knowledgeFivePoits();
+        break;
+      case 1:
+        var knowledgeOptions = Math.floor(
+          Math.random() * temporaryKnowledgeVariables1.length
+        );
+        knowledgeFourPoits();
+        spliceKnowledge();
+        var knowledgeOptions = Math.floor(
+          Math.random() * temporaryKnowledgeVariables1.length
+        );
+        knowledgeOnePoits();
+        break;
+      case 2:
+        var knowledgeOptions = Math.floor(
+          Math.random() * temporaryKnowledgeVariables1.length
+        );
+        knowledgeTwoPoits();
+        spliceKnowledge();
+        var knowledgeOptions = Math.floor(
+          Math.random() * temporaryKnowledgeVariables1.length
+        );
+        knowledgeThreePoits();
+        break;
+      case 3:
+        var knowledgeOptions = Math.floor(
+          Math.random() * temporaryKnowledgeVariables1.length
+        );
+        knowledgeTwoPoits();
+        spliceKnowledge();
+        var knowledgeOptions = Math.floor(
+          Math.random() * temporaryKnowledgeVariables1.length
+        );
+        knowledgeTwoPoits();
+        spliceKnowledge();
+        var knowledgeOptions = Math.floor(
+          Math.random() * temporaryKnowledgeVariables1.length
+        );
+        knowledgeOnePoits();
+
+        break;
+      case 4:
+        var knowledgeOptions = Math.floor(
+          Math.random() * temporaryKnowledgeVariables1.length
+        );
+        knowledgeThreePoits();
+        spliceKnowledge();
+        var knowledgeOptions = Math.floor(
+          Math.random() * temporaryKnowledgeVariables1.length
+        );
+        knowledgeOnePoits();
+        spliceKnowledge();
+        var knowledgeOptions = Math.floor(
+          Math.random() * temporaryKnowledgeVariables1.length
+        );
+        knowledgeOnePoits();
+
+        break;
+      case 5:
+        var knowledgeOptions = Math.floor(
+          Math.random() * temporaryKnowledgeVariables1.length
+        );
+        knowledgeTwoPoits();
+        spliceKnowledge();
+        var knowledgeOptions = Math.floor(
+          Math.random() * temporaryKnowledgeVariables1.length
+        );
+        knowledgeOnePoits();
+        spliceKnowledge();
+        var knowledgeOptions = Math.floor(
+          Math.random() * temporaryKnowledgeVariables1.length
+        );
+        knowledgeOnePoits();
+        spliceKnowledge();
+        var knowledgeOptions = Math.floor(
+          Math.random() * temporaryKnowledgeVariables1.length
+        );
+        knowledgeOnePoits();
+
+        break;
+      case 6:
+        var knowledgeOptions = Math.floor(
+          Math.random() * temporaryKnowledgeVariables1.length
+        );
+        knowledgeOnePoits();
+        spliceKnowledge();
+        var knowledgeOptions = Math.floor(
+          Math.random() * temporaryKnowledgeVariables1.length
+        );
+        knowledgeOnePoits();
+        spliceKnowledge();
+        var knowledgeOptions = Math.floor(
+          Math.random() * temporaryKnowledgeVariables1.length
+        );
+        knowledgeOnePoits();
+        spliceKnowledge();
+        var knowledgeOptions = Math.floor(
+          Math.random() * temporaryKnowledgeVariables1.length
+        );
+        knowledgeOnePoits();
+        spliceKnowledge();
+        var knowledgeOptions = Math.floor(
+          Math.random() * temporaryKnowledgeVariables1.length
+        );
+        knowledgeOnePoits();
+        break;
+    }
+  }
+}
 
 // RADIOS FUNCTIONS
 function blockPhysicalFiveThree() {
@@ -3329,27 +5902,305 @@ function enableAttributesRadios() {
   randomAttributes.disabled = false;
 }
 
-//BUTTONS FUNCTIONS
-function generateSheet(event) {
-  event.preventDefault();
+// FOR METIS
+const metisDeformities = [
+  "Albino",
+  "Bad Hearing (No Ears)",
+  "Bestial Reflection",
+  "Birthmarks",
+  "Blind",
+  "Cleft Lip",
+  "Conjoined Twin Syndrome",
+  "Deaf",
+  "Deformed Tail",
+  "Deranged/Madness",
+  "Evil Eye",
+  "Facial Feature Drift",
+  "Fits",
+  "Fits of Madness",
+  "Foul Scent",
+  "Fragile Claws",
+  "Hairless",
+  "Hard of Hearing",
+  "Hemophilia",
+  "Hermaphrodite",
+  "Hooves",
+  "Horns",
+  "Human Face",
+  "Hunchback",
+  "Hyperactive Senses",
+  "Hyperallergeic",
+  "Lack of Claws",
+  "Long Ears",
+  "Loose Teeth",
+  "Mange",
+  "Misshapen Jaw",
+  "Mashed Face",
+  "Monsterous",
+  "Musk",
+  "Mute",
+  "No Claws",
+  "No Sense of Smell",
+  "Deformed Tail",
+  "One Eye",
+  "Oversized Limbs",
+  "Palsy",
+  "Physical Deformity",
+  "Poor Sight",
+  "Restricted Forms",
+  "Scaly Skin",
+  "Seizures",
+  "Serpent's Tongue",
+  "Silver (Hyper)Sensitivity",
+  "Third Eye",
+  "Tough Hide",
+  "Wasting Disease",
+  "Weak Immune System",
+  "Weak Musculature",
+  "Whiskerless",
+  "Widely Spaced Eyes",
+];
+const metisDeformity = document.getElementById("metis-deformity");
 
-  cleanAttributes();
-  cleanAbilities();
-  cleanAdvantages();
-  cleanRenown();
+// BACKGROUNDS LISTS AND FUNCTIONALITIES
+// REMENBER SILVER FANGS 3 POINTS IN PURE BREED
 
-  outputAuspices();
-  outputBreeds();
-  outputConcepts();
-  outputNames();
-  outputTribes();
-  outputGifts();
+const noRestricticBackgrounds = [
+  "Allies",
+  "Ancestors",
+  "Contacts",
+  "Cultist Allies",
+  "Equipment",
+  "Familiar Spirit",
+  "Favors",
+  "Fate",
+  "Fetish",
+  "Hunting Grounds",
+  "Influence",
+  "Kinfolk",
+  "Mentor",
+  "Numen",
+  "Pure Breed",
+  "Renown",
+  "Resources",
+  "Rites",
+  "Spirit Heritage",
+  "Spiritual Network",
+  "Totem",
+  "Touched",
+  "Treasure",
+  "Years",
+];
+const boneGnawersBackgrounds = [
+  "Allies",
+  "Contacts",
+  "Cultist Allies",
+  "Equipment",
+  "Familiar Spirit",
+  "Favors",
+  "Fate",
+  "Fetish",
+  "Hunting Grounds",
+  "Influence",
+  "Kinfolk",
+  "Mentor",
+  "Numen",
+  "Renown",
+  "Rites",
+  "Spirit Heritage",
+  "Spiritual Network",
+  "Totem",
+  "Touched",
+  "Treasure",
+  "Years",
+];
+const getOfFenrisBackgrounds = [
+  "Allies",
+  "Ancestors",
+  "Cultist Allies",
+  "Equipment",
+  "Familiar Spirit",
+  "Favors",
+  "Fate",
+  "Fetish",
+  "Hunting Grounds",
+  "Influence",
+  "Kinfolk",
+  "Mentor",
+  "Numen",
+  "Pure Breed",
+  "Renown",
+  "Resources",
+  "Rites",
+  "Spirit Heritage",
+  "Spiritual Network",
+  "Totem",
+  "Touched",
+  "Treasure",
+  "Years",
+];
+const glassWalkersBackgrounds = [
+  "Allies",
+  "Contacts",
+  "Cultist Allies",
+  "Equipment",
+  "Familiar Spirit",
+  "Favors",
+  "Fate",
+  "Fetish",
+  "Hunting Grounds",
+  "Influence",
+  "Kinfolk",
+  "Mentor",
+  "Numen",
+  "Renown",
+  "Resources",
+  "Rites",
+  "Spirit Heritage",
+  "Spiritual Network",
+  "Totem",
+  "Touched",
+  "Treasure",
+  "Years",
+];
+const redTalonsBackgrounds = [
+  "Ancestors",
+  "Cultist Allies",
+  "Equipment",
+  "Familiar Spirit",
+  "Favors",
+  "Fate",
+  "Fetish",
+  "Hunting Grounds",
+  "Influence",
+  "Kinfolk",
+  "Mentor",
+  "Numen",
+  "Pure Breed",
+  "Renown",
+  "Rites",
+  "Spirit Heritage",
+  "Spiritual Network",
+  "Totem",
+  "Touched",
+  "Treasure",
+  "Years",
+];
+const shadowLordsBackgrounds = [
+  "Ancestors",
+  "Contacts",
+  "Cultist Allies",
+  "Equipment",
+  "Familiar Spirit",
+  "Favors",
+  "Fate",
+  "Fetish",
+  "Hunting Grounds",
+  "Influence",
+  "Kinfolk",
+  "Numen",
+  "Pure Breed",
+  "Renown",
+  "Resources",
+  "Rites",
+  "Spirit Heritage",
+  "Spiritual Network",
+  "Totem",
+  "Touched",
+  "Treasure",
+  "Years",
+];
+const silentStridersBackgrounds = [
+  "Allies",
+  "Contacts",
+  "Cultist Allies",
+  "Equipment",
+  "Familiar Spirit",
+  "Favors",
+  "Fate",
+  "Fetish",
+  "Hunting Grounds",
+  "Influence",
+  "Kinfolk",
+  "Mentor",
+  "Numen",
+  "Pure Breed",
+  "Renown",
+  "Rites",
+  "Spirit Heritage",
+  "Spiritual Network",
+  "Totem",
+  "Touched",
+  "Treasure",
+  "Years",
+];
+const stargazerBackgrounds = [
+  "Allies",
+  "Ancestors",
+  "Contacts",
+  "Cultist Allies",
+  "Equipment",
+  "Familiar Spirit",
+  "Favors",
+  "Fate",
+  "Hunting Grounds",
+  "Influence",
+  "Kinfolk",
+  "Mentor",
+  "Numen",
+  "Pure Breed",
+  "Renown",
+  "Rites",
+  "Spirit Heritage",
+  "Spiritual Network",
+  "Totem",
+  "Touched",
+  "Treasure",
+  "Years",
+];
+const wendigoBackgrounds = [
+  "Allies",
+  "Ancestors",
+  "Cultist Allies",
+  "Equipment",
+  "Familiar Spirit",
+  "Favors",
+  "Fate",
+  "Fetish",
+  "Hunting Grounds",
+  "Influence",
+  "Kinfolk",
+  "Mentor",
+  "Numen",
+  "Pure Breed",
+  "Renown",
+  "Rites",
+  "Spirit Heritage",
+  "Spiritual Network",
+  "Totem",
+  "Touched",
+  "Treasure",
+  "Years",
+];
 
-  outputAttributesPoints();
-
-  enableAttributesRadios();
-  enableAbilitiesRadios();
+function showBackgroundNoRestriction() {
+  var backgroundOption = Math.floor(Math.random() * 4);
+  switch (backgroundOption) {
+    case 0:
+      break;
+  }
 }
+function showBoneGnawersBackgrounds() {}
+function showGetOfFenrisBackgrounds() {}
+function showGlassWalkersBackgrounds() {}
+function showRedTalonsBackgrounds() {}
+function showShadowLordsBackgrounds() {}
+function showSilentStridersBackgrounds() {}
+function showStargazerBackgrounds() {}
+function showWendigoBackgrounds() {}
+function showSilverFangsBackgrounds() {}
+
+//BUTTONS FUNCTIONS
 
 function cleanWithReset() {
   randomAttributes.checked = true;
@@ -3377,6 +6228,28 @@ function cleanWithReset() {
   mental3.disabled = false;
   mental5.disabled = false;
   mental7.disabled = false;
+}
+
+function generateSheet(event) {
+  event.preventDefault();
+
+  cleanAttributes();
+  cleanAbilities();
+  cleanAdvantages();
+  cleanRenown();
+
+  outputAuspices();
+  outputBreeds();
+  outputConcepts();
+  outputNames();
+  outputTribes();
+  outputGifts();
+
+  outputAttributesPoints();
+  outputAbilitiesPoints();
+
+  enableAttributesRadios();
+  enableAbilitiesRadios();
 }
 
 
