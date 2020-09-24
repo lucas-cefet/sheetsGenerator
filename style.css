@@ -141,6 +141,7 @@ body {
   width: 21%;
   float: left;
   font-size: small;
+  height: 135px;
 }
 
 .infoTransformationHomid {
@@ -179,8 +180,10 @@ body {
 }
 .background-information {
   box-sizing: border-box; /* so the borders don't mess up the alignment */
-  width: 100%;
+  width: 33.3%;
   float: left;
+  min-height: 80px;
+  text-align: center;
 }
 
 .attributes-abilites {
@@ -188,3 +191,15 @@ body {
   width: 50%;
   float: left;
 }
+
+.background-points {
+  box-sizing: border-box; /* so the borders don't mess up the alignment */
+  width: 50%;
+  float: left;
+}
+.background-names {
+  box-sizing: border-box; /* so the borders don't mess up the alignment */
+  width: 50%;
+  float: left;
+}
+
